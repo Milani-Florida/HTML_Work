@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Layout</title>
+  <style>
+    /* ── Reset básico ── */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 12pt;
+      color: #000;
+      background: #fff;
+    }
+
+    /* ── Página de impressão ── */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 15mm 15mm 20mm 15mm;
+    }
+
+    /* ── Cabeçalho ── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #333;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .header .company-name {
+      font-size: 16pt;
+      font-weight: bold;
+    }
+
+    .header .doc-title {
+      font-size: 14pt;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    /* ── Tabela de dados ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 5px 8px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    /* ── Rodapé ── */
+    .footer {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 8px;
+      font-size: 9pt;
+      text-align: center;
+      color: #555;
+    }
+
+    /* ── Regras de impressão ── */
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        margin: 0;
+        padding: 10mm;
+        width: 100%;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Cabeçalho -->
+    <div class="header">
+      <div class="company-name">Nome da Empresa</div>
+      <div class="doc-title">Título do Documento</div>
+    </div>
+
+    <!-- Informações do documento -->
+    <table>
+      <thead>
+        <tr>
+          <th>Campo</th>
+          <th>Valor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Item 1</td>
+          <td>Valor 1</td>
+        </tr>
+        <tr>
+          <td>Item 2</td>
+          <td>Valor 2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Rodapé -->
+    <div class="footer">
+      Documento gerado em <span id="data"></span>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('data').textContent =
+      new Date().toLocaleDateString('pt-BR');
+  </script>
+</body>
+</html>

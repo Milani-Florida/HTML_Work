@@ -1,0 +1,19 @@
+﻿{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Abrir HTML atual no Edge (arquivo ativo)",
+      "type": "msedge",
+      "request": "launch",
+      "file": "${file}",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Abrir HTML atual no Chrome (arquivo ativo)",
+      "type": "chrome",
+      "request": "launch",
+      "file": "${file}",
+      "webRoot": "${workspaceFolder}"
+    }
+  ]
+}

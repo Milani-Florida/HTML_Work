@@ -1,0 +1,358 @@
+<html>
+<!--HEADER-->
+<head>
+    <meta charset="windows-1252">
+    <style>
+        body, table, div, p, strong, span, td, th, h1, h2, h3, h4, h5, h6 {
+            font-family: Helvetica, Arial, sans-serif !important;
+        }
+        @media print {
+            .capa-impressao {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                display: block !important;
+            }
+            .quebra-capa {
+                page-break-after: always !important;
+                break-after: page !important;
+                display: block !important;
+                height: 0 !important;
+            }
+        }
+    </style>
+</head>
+<style>
+    .imgProdutoOrca {
+        width: 60px!important;
+        height: 60px!important;
+    }
+</style>
+<body style="margin: 0px; overflow-x: hidden; min-width: 320px; font-family: Helvetica, Arial, sans-serif; line-height: 1.4285em; color: rgba(0, 0, 0, 0.87); font-smooth: antialiased; font-size: 12px;">
+    <!-- INÍCIO CAPA -->
+    <div style="position: relative; text-align: center; background-size: cover; background-position: center; z-index: 1; page-break-inside: avoid;">
+        <!-- INÍCIO LOGOTIPO CAPA -->
+        <img src="https://voltyou.com.br/publica/Logo_Voltyou_1_pequeno.png" alt="Logo Voltyou" style="position: absolute; top: 4%; left: 50%; transform: translateX(-50%); max-width: 225px; width: 22.5vw; height: auto; z-index: 10;">
+        <!-- FIM LOGOTIPO CAPA -->
+        <img src="https://voltyou.com.br/publica/capa_do_pedido_venda_rev5.jpg" style="max-width: 100%; height: auto;" alt="capa">
+            <p style="line-height: 1.4; background-color: rgb(245, 241, 225); color: rgb(48, 56, 81); position: absolute; text-align: center; top: 15%; left: 50%; transform: translateX(-50%); outline-style: solid; outline-color: rgb(210, 195, 120); outline-width: 3px; outline-offset: 0; border-radius: 12px; box-shadow: 0 2px 12px 0 rgba(48,56,81,0.08); padding: 1.5rem 1.5rem 1.2rem 1.5rem; width: 600px; max-width: 95%; min-width: 320px;">
+            <strong style="font-size: 2.5rem; color: rgb(48, 56, 81);">PROPOSTA DE ILUMINAÇÃO</strong> <br/>
+            <strong style="font-size: 2.5rem; width: 10em;">{CLIENTE.NOMEFANTASIA}</strong> <br/><br/>
+            <strong style="font-size: 1.5rem;">Data: {DATAPEDIDO} </strong> <br/><br/>
+            <strong style="font-size: 1.5rem;">Área de Entrega: {AREAENTREGA} </strong>
+        </p>
+        </div style="max-height: 950px; overflow: hidden;">
+    </div>
+    <div style="page-break-after: always;"></div>
+    <!-- FIM CAPA -->
+
+    <div>
+        <table style="width: 100%; margin: 1em 0em; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; margin-top: 0em; table-layout: fixed; " width="100%" align="left">
+            <tr>
+                <td class="twelve wide" style="padding-top: 2em; text-align: inherit; border-top: none; border-left: none; width: 75%; z-index: 2;" width="75%">
+                    <a href="https://www.voltyou.com.br/">
+                        <span style="padding-left: 2.5rem; font-size: 13px; color: black; font-style: italic; padding-bottom: 0.4rem;">Quem somos?</span>
+                        <img class="ui left floated small image" src="{IMAGEMLOGO}" style="box-shadow: 0px 0px 10px 0px #888888; border-radius: 0.7; position: relative; background-color: transparent; display: block; margin-right: 1em; margin-bottom: 1em; width: 150px; height: auto; max-width: none; margin-left: 1em;" width="150">
+                    </a>
+                    <td class="four wide" style="border-top: none; width: 70%; padding-right: 1em;" width="25%">
+                        <strong>{FILIAL.ABREVIATURA} - {EMPRESA.RAZAOSOCIAL}</strong> <br/>
+                        {FILIAL.ENDERECO} {FILIAL.NUMEROEND} {FILIAL.COMPLEMENTOEND} - {FILIAL.MUNICIPIO} <br/>
+                        {FILIAL.UF} - CEP {FILIAL.CEP} - Tel. {FILIAL.TELEFONE}<br/>
+                        CNPJ: {FILIAL.CNPJ} - Inscr.Estadual {FILIAL.IE}
+                    </td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="conteudo" style="display: block; max-width: 100%;">
+        <table style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; margin-top: 0em; table-layout: fixed; border-top: 0.2em solid #2185D0; background-color: rgba(167, 203, 230, 0.2);" width="100%" align="left">
+            <tr>
+                <td class="eight wide" style="padding: 0.78571429em; text-align: inherit; border-top: none; border-left: none; width: 50%;" width="50%">
+                    <strong style="color: rgb(46, 58, 120);">{TIPO_PEDIDO}</strong><br/>
+                    <strong style="color: rgb(46, 58, 120);">Número Pedido no Cliente(PO):</strong> {SEUPEDIDO} <br/>
+                    <strong style="color: rgb(46, 58, 120);">Número do Pedido:</strong> {PEDIDO} <br/>
+                    <strong style="color: rgb(46, 58, 120);">Data:</strong> {DATAPEDIDO}<br/>
+                </td>
+                <td class="eight wide" style="padding: 0.78571429em; text-align: inherit; border-top: none; border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
+                    
+    <script>
+        var emailrep = '{REPRESEN.EMAIL}';
+                    </script>
+                    <strong style="color: rgb(46, 58, 120);">Status:</strong> {STATUS}<br/>
+                    <strong style="color: rgb(46, 58, 120);">Vendedor:</strong> {REPRESEN.RAZAOSOCIAL} <br/>
+                    <strong style="color: rgb(46, 58, 120);">Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="ligarrepresentante">{REPRESEN.TELEFONE}</button></strong><br/>
+                    <strong style="color: rgb(46, 58, 120);">E-mail:<button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailrepres">{REPRESEN.EMAIL}</button></strong><br/>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td colspan="2" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none;">
+                    <div class="ui header" style="border: none; margin: calc(2rem -  0.14285em ) 0em 1rem; padding: 0em 0em; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: bold; line-height: 1.2857em; text-transform: none; color: rgba(0, 0, 0, 0.87); margin-top: -0.14285em; margin-bottom: 0em; font-size: 1.28em;"> FATURAMENTO </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: none; border-left: none;">
+                    <strong>Cliente:</strong> {CLIENTE} - {CLIENTE.RAZAOSOCIAL} - <strong>Fantasia:</strong> {CLIENTE.NOMEFANTASIA}<br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    <strong>CNPJ:</strong> {CNPJ} <br/>
+                    <strong>Endereço:</strong> {ENDERECO} <br/>
+                    <strong>Bairro:</strong> {BAIRRO} <br/>
+                    <strong>Contato:</strong> {CONTATO.NOME} <br/>
+                    <strong>Contato E-mail:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailcontato">{CONTATO.EMAIL}</button>
+                </td>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
+                    <strong>Insc. Estadual:</strong> {INSCESTADUAL} <br/>
+                    <strong>Município:</strong> {MUNICIPIO} - {UF} <br/>
+                    <strong>CEP:</strong>{CEP}<br/>
+                    <strong>Cliente Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small;background: none;" id="ligarcliente">{CLIENTE.TELEFONE}</button><br/>
+                    <strong>Cliente E-mail:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailcliente">{CLIENTE.EMAIL}</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none;">
+                    <div class="ui header" style="border: none; margin: calc(2rem -  0.14285em ) 0em 1rem; padding: 0em 0em; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: bold; line-height: 1.2857em; text-transform: none; color: rgba(0, 0, 0, 0.87); margin-top: -0.14285em; margin-bottom: 0em; font-size: 1.28em;"> CONDIÇÕES </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    
+                    <strong>Natureza de Operação:</strong> {NATOPERACAO} - {NATOPER.DESCRICAO} <br/>
+                    <strong>Condição de Pagamento:</strong>{PAGAMENTOS2} {CONDPAG.DESCRICAO}
+                </td>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
+                    <strong>Tipo de Frete:</strong>  {TIPOFRETE} <br/>
+                    <strong>Transportadora:</strong> {TRANSPORTADORA} - {TRANSP.RAZAOSOCIAL} <br/>
+                    <strong>Data Prev. Fat.:</strong> {DATAPREVFAT} <br/>
+                </td>
+            </tr>
+        </table>
+        <!--/HEADER-->
+        <!--ENDENTREGA-->
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td colspan="2" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: none; border-left: none;">
+                    <div class="ui header" style="border: none; margin: calc(2rem -  0.14285em ) 0em 1rem; padding: 0em 0em; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: bold; line-height: 1.2857em; text-transform: none; color: rgba(0, 0, 0, 0.87); margin-top: -0.14285em; margin-bottom: 0em; font-size: 1.28em;"> ENTREGA </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    <strong>Endereço:</strong> {ENDENT}<br/>
+                    <strong>Município:</strong> {MUNENT}
+                </td>
+                <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
+                    <strong>UF:</strong> {UFENT} <br/>
+                    <strong>Bairro:</strong> {BAIENT}
+                </td>
+             <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
+                 <strong>CEP:</strong> {CEPENT}<br/>
+                 <strong>Peso Bruto:</strong> <span id="pesoBruto1">{PESOBRUTO}</span>
+             </td>
+            </tr>
+        </table>
+        <!--/ENDENTREGA-->
+        <!--ENDCOBRANCA-->
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td colspan="2" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: none; border-left: none;">
+                    <div class="ui header" style="border: none; margin: calc(2rem -  0.14285em ) 0em 1rem; padding: 0em 0em; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: bold; line-height: 1.2857em; text-transform: none; color: rgba(0, 0, 0, 0.87); margin-top: -0.14285em; margin-bottom: 0em; font-size: 1.28em;"> COBRANÇA </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    <strong>Endereço:</strong> {ENDCOB}<br/>
+                    <strong>Município:</strong> {MUNCOB}
+                </td>
+                <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
+                    <strong>UF:</strong> {UFCOB} <br/>
+                    <strong>Bairro:</strong> {BAICOB}
+                </td>
+                <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
+                    <strong>CEP:</strong> {CEPCOB}
+                </td>
+            </tr>
+        </table>
+        <!--/ENDCOBRANCA-->
+        <!--SUBHEADER-->
+
+
+        <table style="width: 100%; margin: 0em 0em; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 0.9em;" width="100%" align="left">
+            <thead>
+                <tr>
+                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0.28571429rem 0em 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-left: none;border-top: 0.2em solid #2185D0; font-size: 0.7rem;">#</th>
+                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Imagem</th>
+                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Descrição do Produto</th>
+                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Marca</th>
+                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Un</th>
+                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Qtd</th>
+                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Preço <br/> Unitário</th>
+                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Valor IPI</th>
+                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">ST</th>
+                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0em 0.28571429rem 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Preço Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--/SUBHEADER-->
+                <!--BODY-->
+                <tr>
+                    <td style="text-align: center; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; border-left: none;border-left: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;">{ITEM}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{IMG}</td>
+                    <td style="text-align: center; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; font-size: 0.7rem">{CODPRODUTO} - {DESCPRODUTO}<br/>{ESPTECNICA}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{FONTEFORNEC}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{UN}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="center">{QUANTIDADE}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="right">{PRECOUNITARIO}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="right">{VALIPI}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="right">{ST}</td>
+                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;border-right: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;" align="right">{VALTOTAL}</td>                </tr>
+
+            <!--/BODY-->
+            <!--SUBTOTAL1-->
+            </tbody>
+            <tfoot style="box-shadow: none;">
+            <tfoot>
+                <tr>
+                    <th colspan="7" style="border-top: 1.2px solid rgba(44, 56, 69, 0.341); color: rgba(0, 0, 0, 0.87); padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; border-radius: 0em 0em 0em 0.28571429rem; text-align: right; border-left: none;" valign="middle" ></th>
+                    <th colspan="2" style="border-top: 1.2px solid rgba(44, 56, 69, 0.341); color: rgba(0, 0, 0, 0.87); padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; text-align: right; padding-left: 0.7em; padding-right: 0.7em;" valign="middle" align="right"><span>Total Itens:</span></th>
+                    <th style="border-top: 1.2px solid rgba(44, 56, 69, 0.341); color: rgba(0, 0, 0, 0.87); padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; text-align: right; padding-left: 0.7em; padding-right: 0.7em;" valign="middle" align="right">{VALTOTAL}</th>
+                </tr>
+                <tr>
+                    <th colspan="7" style="color: rgba(0, 0, 0, 0.87); vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; border-radius: 0em 0em 0em 0.28571429rem; text-align: right; border-left: none;" valign="middle" align="right"></th>
+                    <th colspan="2" style="color: rgba(0, 0, 0, 0.87); vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; text-align: right; padding-left: 0.7em; padding-right: 0.7em;" valign="middle" align="right"><span>Frete:</span></th>
+                    <th style="color: rgba(0, 0, 0, 0.87); vertical-align: middle; font-style: normal; font-weight: normal; text-transform: none; text-align: right; padding-left: 0.7em; padding-right: 0.7em;" valign="middle" align="right">{VALFRETE}</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td class="pesos" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: none; border-left: none; width: 37.5%;" width="37.5%";>
+                    <strong class="pesos2"> Peso Bruto:</strong> <span id="pesoBruto2">{PESOBRUTO}</span> Kg<br/>
+                    <strong class="valor1">Valor de Seguro:</strong> {VALSEGURO} <br/>
+                    <strong class="valor2">Valor Substituição Tributária:</strong> {VALSUBSTRI}  <br/>
+                    <strong class="valor3">Valor Enc. Financeiros:</strong> {VALENCFIN} <br/>
+                </td>
+                <td class="six wide" style="padding: 0.78571429em 0.78571429em; text-align: right; border-top: none; border-left: 1px solid rgba(34, 36, 38, 0.1); width: 31.25%;" width="31.25%">
+                    <div style="background:rgba(167,203,230,0.35); border-radius:0.5em; padding:1em; margin-bottom:1em; display:inline-block; box-shadow:0 1px 4px rgba(46,58,120,0.08); border:1px solid #2185D0;">
+                        <strong style="color:#2185D0; font-size:1.2em;">TOTAL DO DOCUMENTO R$:</strong>
+                        <span style="color:#2185D0; font-size:1.3em; font-weight:bold; margin-left:0.5em;">{VALTOTALDOC}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table class="ui table celled unstackable blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 1em; margin-bottom: 0em; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: none; border-left: none;">
+                    <div class="ui header" style="border: none; margin: calc(2rem -  0.14285em ) 0em 1rem; padding: 0em 0em; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; font-weight: bold; line-height: 1.2857em; text-transform: none; color: rgba(0, 0, 0, 0.87); margin-top: -0.14285em; margin-bottom: 0em; font-size: 1.28em;"> OBSERVAÇÕES </div><br>
+                    <span style="font-size: 1.15em; margin-top:0.7em; color: #1a237e; font-weight: bold; font-family: 'Arial Black', Arial, sans-serif;">{TEXTO}</span> <br>
+                    <strong style="display:block; margin-top:0.7em;">ORÇAMENTO VÁLIDO POR 30 DIAS</strong>
+                    <strong style="display:block; margin-top:0.7em;">ALTERAÇÃO DO CNPJ DO CLIENTE NA NOTA FISCAL<br/> </strong> 
+					Qualquer alteração de CNPJ do Cliente após o faturamento estará condicionada ao ressarcimento dos impostos recolhidos em duplicidade. <br/>
+
+                    <strong style="display:block; margin-top:0.7em;">CONFERÊNCIA DAS CORES<br/></strong>
+					 É responsabilidade do Cliente conferir e confirmar neste pedido, antes do início da fabricação, a cor/acabamento do produto e a cor/temperatura da luz emitida;
+                      após a fabricação, não haverá troca/alteração de cor.<br/>
+
+                    <strong style="display:block; margin-top:0.7em;">CONDIÇÕES COMERCIAIS:</strong>
+					Preços em moeda brasileira, sujeitos a ajuste por variação cambial do dólar em caso de variações acima de 10%, tributos e encargos legais alterados após o pedido podem 
+                    ser acrescidos. Garantia conforme cada fabricante e produto. Proposta sujeita à aprovação de crédito (quando aplicável) e limitada ao escopo descrito; signatário declara 
+                    poderes para ordem de compra. Entrega conforme acordado (datas estimadas). Transferência de propriedade após pagamento integral. A Fornecedora não responde por lucros 
+                    cessantes ou danos indiretos, e sua responsabilidade total fica limitada a 20% do valor do fornecimento relacionado. A Fornecedora observa princípios de conduta e legislações aplicáveis,
+                     incluindo anticorrupção e código de conduta formal. <br/>
+
+                    <strong style="display:block; margin-top:0.7em;">CONCORDÂNCIA:</strong>
+                    Declaro formalmente que li, compreendi e aceito integralmente as condições comerciais e técnicas apresentadas nas proposta comercial supracitadas.<br/><br/><br/>
+                    <button id="btnAceite" style="background-color:#2185D0;color:white;padding:0.5em 1.2em;border:none;border-radius:0.3em;cursor:pointer;font-weight:bold;">ACEITAR PEDIDO</button> <br/>
+
+                    ___________________________________________________________________ <br/>
+                    Razão Social: {CLIENTE.RAZAOSOCIAL} <br/>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div style="page-break-after:auto; "></div>
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // aceite do pedido por email
+            document.getElementById('btnAceite').addEventListener('click', function() {
+                var pedido = '{PEDIDO}';
+                var assunto = encodeURIComponent('Pedido numero: '+pedido + ' foi aprovado');
+                var corpo = (
+                    'Prezados,%0D%0A' +
+                    '%0D%0A Estou de acordo com o pedido numero: ' + pedido + '.' +
+                    '%0D%0A' +
+                    'Aguardo o envio da mercadoria e NF-e.%0D%0A' +
+                    '%0D%0A Obrigado.'
+                );
+                var mailto = `mailto:${emailrep}?subject=${assunto}&body=${corpo}`;
+                window.location.href = mailto;
+            });
+            // Formatar Peso Bruto para duas casas decimais
+            function formatPesoBruto(id) {
+                var el = document.getElementById(id);
+                if (el && el.textContent) {
+                    var val = parseFloat(el.textContent.replace(',', '.'));
+                    if (!isNaN(val)) {
+                        el.textContent = val.toFixed(2).replace('.', ',');
+                    }
+                }
+            }
+            formatPesoBruto('pesoBruto1');
+            formatPesoBruto('pesoBruto2');
+            function enviarEmailRepresentante() {
+                const emailDestinatario = document.getElementById('enviaremailrepres').textContent.trim();
+                // Formatar o e-mail corretamente para ser usado no link
+                const emailFormatado = encodeURIComponent(emailDestinatario);
+                // Construir o link com o valor do e-mail formatado
+                const linkEmail = "mailto:" + emailFormatado;
+                // Redirecionar o usuario para o link de e-mail
+                window.location.href = linkEmail;
+            }
+            function enviarEmailContato() {
+                // Obter o valor da variavel
+                const emailDestinatario = '{CONTATO.EMAIL}'
+                // Construir o link com o valor da variavel
+                const linkEmail = "mailto:" + emailDestinatario;
+                // Redirecionar o usuario para o link de email
+                window.location.href = linkEmail;
+            }
+            function ligacaoparaCliente() {
+                // Obter o valor da variavel
+                const telefoneDestinatario = '{CLIENTE.TELEFONE}'
+                // Construir o link com o valor da variavel
+                const ligacaotelefonica = "tel:" + telefoneDestinatario;
+                // Redirecionar o usuario para o link de email
+                window.location.href = ligacaotelefonica;
+            }
+             function ligacaoparaRepresentante() {
+                // Obter o valor da variavel
+                const telefoneDestinatario = '{REPRESEN.TELEFONE}'
+                // Construir o link com o valor da variavel
+                const ligacaotelefonica = "tel:" + telefoneDestinatario;
+                // Redirecionar o usuario para o link de email
+                window.location.href = ligacaotelefonica;
+            }
+            function enviarEmailCliente() {
+                // Obter o valor da variavel
+                const emailDestinatario = '{CLIENTE.EMAIL}'
+                // Construir o link com o valor da variavel
+                const linkEmail = "mailto:" + emailDestinatario;
+                // Redirecionar o usuario para o link de email
+                window.location.href = linkEmail;
+            }
+            document.getElementById('enviaremailrepres').addEventListener('click', enviarEmailRepresentante);
+            document.getElementById('enviaremailcontato').addEventListener('click', enviarEmailContato);
+            document.getElementById('ligarcliente').addEventListener('click', ligacaoparaCliente);
+            document.getElementById('enviaremailcliente').addEventListener('click', enviarEmailCliente);
+            document.getElementById('ligarrepresentante').addEventListener('click', ligacaoparaRepresentante);
+        })
+      </script>
+</body>
+<!--/SUBTOTAL1-->
+</html>

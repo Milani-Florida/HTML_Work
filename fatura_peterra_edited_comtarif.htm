@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://sistema.otimogestor.com.br/comum/libs/semantic/dist/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<style type="text/css">
+    body {
+        font-size: 12px;
+    }
+
+    .ui.table {
+        margin-top: 0;
+        border: 2px solid black !important;
+    }
+
+    td.centralizado-g {
+        vertical-align: middle !important;
+        font-size: 12px;
+        text-align: center !important;
+    }
+
+    .ui.table td {
+        padding: 5px !important;
+    }
+
+    h5.ui.header {
+        margin-top: 5px !important;
+        margin-bottom: 2px !important;
+        padding-left: 10px;
+    }
+
+    .ui.divider:not(.vertical):not(.horizontal) {
+        border-top: 2px dashed black;
+        border-bottom: none;
+    }
+
+    .ui.structured.celled.table tr td,
+    .ui.structured.celled.table tr td {
+        border: 2px solid black !important;
+    }
+
+    .quebra {
+        page-break-after: always;
+    }
+</style>
+
+<body>
+    <div class="ui center">
+        <table class="ui table very compact small celled">
+            <tbody>
+                <tr>
+                    <td class="center aligned" style="width: 110px;">
+                        <img src="{IMAGEMLOGO}" class="center aligned" style="width:130px">
+                    </td>
+                    <td><h2 class="center aligned"><b>FATURA DE LOCACAO</b></h2>
+                    </td>
+                    <td rowspan="3" class="center aligned">
+                        <h5 class="ui header"><b>Numero da Fatura: </b></h5>{FATURA}<br>
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table>  
+
+        <table class="ui table very compact small celled">
+            <thead>
+                <tr>
+                    <th><h4 class="ui header">{RAZAOSOCIAL}</h4>
+                    </th>
+                </tr>            
+            <tbody>
+                <tr>
+                    <th>CNPJ</th>
+                    <th>Inscricao Estadual</th>
+                </tr>
+                <tr>
+                    <td>{CNPJ}</td>
+                    <td>{INSCESTADUAL}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Endereco</th>
+                    <th>Bairro / Municipio / UF</th>
+                    <th>CEP</th>
+                </tr>
+                <tr>
+                    <td>{ENDERECO}</td>
+                    <td>{BAIRRO} / {MUNICIPIO} / {UF}</td>
+                    <td>{CEP}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Telefone</th>
+                    <th>Whatsapp</th>
+                    <th>E-mail</th>
+                </tr>
+                <tr>
+                    <td>{TELEFONE}</td>
+                    <td>{FILIAIL.FAX}</td>
+                    <td>{FILIAL.EMAILFILIAL}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="ui table very compact small celled">
+            <thead>
+                <tr>
+                    <th><h5 class="ui header">TOMADOR</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Nome do Tomador/Razao Social</th>
+                    <th>CPF / CNPJ</th>
+                    <th>Telefone</th>
+                </tr>
+                <tr>
+                    <td>{CLIENTE.RAZAOSOCIAL}</td>
+                    <td>{CLIENTE.CNPJ}</td>
+                    <td>{CLIENTE.TELEFONE}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Endereco</th>
+                    <th>Bairro / Municipio / UF</th>
+                    <th>Inscricao Estadual</th>
+                </tr>
+                <tr>
+                    <td>{CLIENTE.ENDERECO} - CEP: {CLIENTE.CEP}</td>
+                    <td>{CLIENTE.BAIRRO} / {CLIENTE.MUNICIPIO} / UF: {CLIENTE.UF}</td>
+                    <td>{CLIENTE.INSCESTADUAL}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="ui divider"></div>
+        <table class="ui table very compact small celled">
+             <thead>
+                <tr>
+                    <th><h5 class="ui header">DADOS DA FATURA</h5></th>
+                </tr>
+             </thead>
+            
+            <tbody>    
+                <tr>
+                    <th>Natureza de Operacao</th>
+                    <th>Numero de Contrato</th>
+                    <th>Data de Emissao</th>
+                    <th>Vencimento</th>
+                </tr>
+                <tr>
+                    <td>Fatura de Locacao de Bens Moveis</td>
+                    <td>{CONTRATO}</td>
+                    <td>{DATAEMISSAO}</td>                    
+                    <td>{DATAVENCTO}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th>Forma de Pagamento</th>
+                </tr>
+                <!--DUPLICATAS-->
+                <tr>
+                    <!-- ***** NECESSIDADE: Apresente a descriÃ§Ã£o do tipo de documento que foi destacado para cada tarifador. Se um Ãºnico tipo de documento, nÃ£o repetir. *****-->
+                    <td>Tipo de Documento: {TIPODOCUMENTO}</td>
+                </tr>
+                <!--/DUPLICATAS-->
+            </tbody>
+        </table>
+            
+        <table class="ui table very compact small celled" id="tableProduto">
+            <thead>
+                <tr>
+                    <th><h5 class="ui header">MAQUINA(S) LOCADA(S)</h5></th>
+                </tr>
+                <tr>
+                    <th class="center aligned">Modelo de Maquina</th>
+                    <th class="center aligned">Patrimonio</th> 
+                    <th class="center aligned">Valor</th>
+                    <th class="center aligned">Periodo de Locacao</th>
+                </tr>
+                <!--CTPROD-->
+                <tr>
+                    <td class="center aligned">{PRODUTO.DESCRICAO}</td>
+                    <td class="center aligned">{EQUIP.CODIGO}</td>
+                    <td class="center aligned">{CTPROD.VALORTOTAL}</td>
+                    <td class="center aligned">Valores referentes ao periodo de {PERIODO_LOCACAO_RAPIDA}</td>
+                </tr>
+                <!--/CTPROD-->
+            </thead>
+            <tbody> 
+                    <td></td>
+                    <td></td>
+                    <td></td>                   
+                    <td class="right aligned"><strong><h5>Total da Locacao: </strong>{VALOREMISSAO}</h5></td>
+                </tr>
+            </tbody>    
+        </table>
+        
+        <table class="ui table very compact small celled">
+            <thead>
+                <tr>
+                    <th><h5 class="ui header">FRANQUIA</h5></th>
+                </tr>
+            </thead>
+            <tbody>    
+                <tr>
+                    <th class="center aligned">Modelo de Maquina</th>
+                    <th class="center aligned">Patrimonio</th> 
+                    <th class="center aligned">Franquia/Horimetro</th>
+                </tr>
+            </tbody>
+            <tbody>  
+                <!--CTTARIF-->
+                <tr>
+                <!-- ***** NECESSIDADE: Que apareÃ§a o valor preenchido no campo Quantidade que fica dentro do cadastro de contratos, em tarifadores, dentro de cada tarifador usado no contrato *****-->                
+                    <td class="center aligned">{PRODUTO.DESCRICAO}</td>
+                    <td class="center aligned">{EQUIP.CODIGO}</td>
+                    <td class="center aligned">{CTTARIF.QTDEFRANQUIA}</td>
+                </tr>
+                <!--/CTTARIF--> 
+            </tbody>
+        </table>
+
+        <table class="ui table very compact small celled">
+            <thead>
+            <tr>
+                <th><h5 class="ui header">CONSUMO</h5></th>
+            </tr>
+            </thead>    
+                <tr>
+                    <th class="center aligned">Maquina</th>
+                    <th class="center aligned">Patrimonio</th>
+                    <th class="center aligned">Nr. Serie</th>
+                    <th class="center aligned">Horimetro Anterior</th>
+                    <th class="center aligned">Horimetro Atual</th>
+                    <th class="center aligned">Horas de Uso no Periodo</th>
+                </tr>
+            <tbody>
+                <!--CTAPONTR-->
+                <tr>
+                    <td class="center aligned">{PRODUTO.DESCRICAO}</td>
+                    <td class="center aligned">{EQUIP.CODIGO}</td>
+                    <td class="center aligned">{EQUIP.SERIEFABRICANTE}</td>
+                    <td class="center aligned">{CTAPONTR.ULTIMOAPONT}</td>
+                    <td class="center aligned">{ATUAL}</td>
+                    <td class="center aligned">{CTAPONTR.QTDE}</td> 
+                </tr>
+                <!--/CTAPONTR-->
+            </tbody>
+        </table>
+
+        <div class="ui divider"></div>
+        <table class="ui table very compact small celled">
+            <thead>
+            <tr>
+                <th class="ui header">DADOS ADICIONAIS</th>
+            </tr>
+            </thead>
+            <tbody>
+                <td>
+                    Nos termos da Lei numero 116/2003, a atividade de bens nao se configura como servico, nao sendo tributada pelo ISS. Portanto inexiste a obrigacao de emissao de documento fiscal (Nota Fiscal de Servicos) para esse fim. Para os efeitos da Legislacao Federal, adota-se o presente "RECIBO DE LOCACAO DE EQUIPAMENTOS", previsto na Lei numero 8846/1994. 
+                </td>
+                <br>
+                <tr>
+                    <td class="center aligned">{CONTRATO_OBS_FATURA}</td>    
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="ui table very compact small celled">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="center aligned padding-mini">
+                        Recebi(emos) de {RAZAOSOCIAL}, os bens moveis em locacao, constantes desta fatura de locacao indicada acima.
+                    </td>
+                    <td rowspan="2"><h5>Fatura No</h5>{FATURA}</td>
+                </tr>
+                <tr>
+                    <td class="center aligned sem-margem-bot">
+                        Data do Recebimento. <br>
+                        _________/_________/_______________
+                    </td>
+                    <td class="center aligned sem-margem-bot">
+                        Identificacao e assinatura do recebedor. <br>
+                        ___________________________________________________
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="https://sistema.otimogestor.com.br/comum/libs/brc/numeral.min.js"></script>
+<script src="https://sistema.otimogestor.com.br/comum/libs/brc/numeral.pt-br.js"></script>
+<script src="https://sistema.otimogestor.com.br/comum/libs/brc/lodash.min.js"></script>
+<script src="https://sistema.otimogestor.com.br/comum/libs/jquery/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    numeral.locale("pt-br");
+
+</script>
+
+</html>
+<div class="quebra"></div>

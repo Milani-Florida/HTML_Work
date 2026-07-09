@@ -1,0 +1,142 @@
+
+<!--HEADER-->
+<html style="box-sizing: border-box;">
+<body style="height: 100%; margin: 0px; padding: 5px; overflow-x: hidden; min-width: 320px; font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif; line-height: 1.4285em; font-smoothing: antialiased; font-size: 11px; padding-top: 20px;">
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; border-collapse: separate; border-spacing: 0px; font-size: 1em; margin-top: 0em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td class="twelve wide" style=" padding: 0.78571429em 0.78571429em; border-top: none; border-left: none; width: 75%;" width="75%">
+                    <img class="ui small image" src="{IMAGEMLOGO}" style="border: 0; position: relative; vertical-align: middle; background-color: transparent; display: block; width: 150px; height: auto; font-size: 0.92857143rem; max-width: none;" width="150">
+                    <p style="margin: 0em 0em 1em; line-height: 1.4285em; margin-bottom: 0em;">
+                        <strong>{FILIAL.ABREVIATURA} - {EMPRESA.RAZAOSOCIAL}</strong> <br/>
+                        {FILIAL.ENDERECO} {FILIAL.NUMEROEND} – {FILIAL.MUNICIPIO} <br/>
+                        {FILIAL.UF} - CEP {FILIAL.CEP} - Tel. {FILIAL.TELEFONE}<br/>
+                        CNPJ: {FILIAL.CNPJ} - Inscr.Estadual {FILIAL.IE}
+                    </p>
+                </td>
+                <td class="four wide" style=" padding: 0.78571429em 0.78571429em; border-top: none; border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
+                    <strong>Orçamento:</strong> {ORCAMENTO}<br/>
+                    <strong>{DATA}</strong>
+                </td>
+            </tr>
+        </table>
+
+        <table class="ui table celled unstackable fixed blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; border-collapse: separate; border-spacing: 0px; font-size: 1em; table-layout: fixed; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td colspan="2" class="sixteen wide" style=" padding: 0.78571429em 0.78571429em; border-top: none; border-left: none; width: 100%;" width="100%">
+                    <strong>Cliente:</strong> {CLIENTE} - {CLIENTE.RAZAOSOCIAL} - ({CLIENTE.NOMEFANTASIA})
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style=" padding: 0.78571429em 0.78571429em; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    <strong>CNPJ:</strong> {CNPJ} <br/>
+                    <strong>Endereço:</strong> {ENDERECO} <br/>
+                    <strong>Bairro:</strong> {BAIRRO} <br/>
+                    <strong>E-mail:</strong> {CLIENTE.EMAIL} 
+                    <strong>Contato:</strong> {CONTATO.NOME}<br/>
+                    <strong>Contato E-mail:</strong> {CONTATO.EMAIL}       
+                </td>
+                <td class="eight wide" style=" padding: 0.78571429em 0.78571429em; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
+                    <strong>Insc. Estadual:</strong> {INSCESTADUAL} <br/>
+                    <strong>Município:</strong> {MUNICIPIO} - {UF} <br/>
+                    <strong>CEP:</strong> {CEP} <br/>
+                    <strong>Telefone:</strong> {CLIENTE.TELEFONE}
+                </td>
+            </tr>
+            <tr>
+                <td class="eight wide" style=" padding: 0.78571429em 0.78571429em; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
+                    <strong>Data Validade:</strong> {DATAVALIDADE} <br/>                                                                        
+                    <strong>Banco:</strong>{BANCO} - {BANCO.DESCRICAO} <br/>
+                    <strong>Condição de Pagamento:</strong> {CONDPAG.DESCRICAO} <br/>
+                </td>
+                <td class="eight wide" style=" padding: 0.78571429em 0.78571429em; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
+                    <strong>Nosso Vendedor:</strong> {REPRESEN.RAZAOSOCIAL} - {EMAIL}<br/>
+                    <strong>Transportadora:</strong>  {TRANSPORTADORA} - {TRANSP.RAZAOSOCIAL} <br/>
+                    <strong>Tipo de Frete:</strong>  {TIPOFRETE}
+                </td>
+            </tr>
+        </table>
+        <!--/HEADER-->
+        <!--SUBHEADER-->
+        <table class="ui table celled compact small unstackable blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; border-collapse: separate; border-spacing: 0px; border-top: 0.2em solid #2185D0; font-size: 0.9em;" width="100%" align="left">
+            <thead>
+                <tr>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: none;">#</th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Produto</th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Descrição </th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">UN</th>                                        
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Qtde</th>                                        
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Preço Unitário</th> 
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Preço Total</th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">% IPI </th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Valor IPI </th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">ST</th>
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">% Desc</th>                                      
+                    <th style="background: #F9FAFB; padding: 0.92857143em 0.78571429em; font-weight: bold; border-bottom: 1px solid rgba(34, 36, 38, 0.1); padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">Preço Total Com IPI</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!--/SUBHEADER-->
+            <!--BODY-->
+                <tr> 
+                    <td style=" border-top: none; padding: 0.5em 0.7em; border-left: none;">{ITEM}</td>
+                    <td style=" border-top: none; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{CODPRODUTO}</td>                                        
+                    <td style=" border-top: none; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{DESCPRODUTO}</td>
+                    <td style=" border-top: none; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{UN}</td>
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{QUANTIDADE}</td>                                        
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{PRECOUNITARIO}</td>                                        
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{PRECOSEMIPI}</td>
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{IPI}</td>
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{VALIPI}</td>
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{ST}</td>                    
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{PERCDESC}</td>
+                    <td style=" border-top: none; text-align: right; padding: 0.5em 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);">{VALTOTAL}</td>
+                </tr>
+            <!--/BODY-->
+            <!--SUBTOTAL1-->
+            </tbody>
+            <tfoot> 
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; border-radius: 0em 0em 0em 0.28571429rem; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Total dos Produtos</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; border-radius: 0em 0em 0.28571429rem 0em; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{VALTOTAL}</th>
+                </tr>
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Valor de Frete</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{VALFRETE}</th>
+                </tr>
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Valor de ICMS ST</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{VALICMSSUBS}</th>
+                </tr>
+                
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Total do Venda</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{VALTOTALGERAL}</th>
+                </tr>
+                <tr>
+                    <th colspan="12" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle"></th>
+                </tr>
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Peso Líquido</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{PESOLIQUIDO}</th>
+                </tr>
+                <tr>
+                    <th colspan="11" style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: none;" valign="middle">Peso Bruto</th>
+                    <th style="border-top: 1px solid rgba(34, 36, 38, 0.15); background: #F9FAFB; padding: 0.78571429em 0.78571429em; vertical-align: middle; font-style: normal; font-weight: normal; text-align: right; padding-left: 0.7em; padding-right: 0.7em; border-left: 1px solid rgba(34, 36, 38, 0.1);" valign="middle">{PESOBRUTO}</th>
+                </tr>
+            </tfoot>
+        </table>
+        <!--/SUBTOTAL1-->
+        <!--OBS-->
+        <table class="ui table celled unstackable blue" style="width: 100%; margin: 1em 0em; border: 1px solid rgba(34, 36, 38, 0.15); box-shadow: none; border-radius: 0.28571429rem; text-align: left; border-collapse: separate; border-spacing: 0px; font-size: 1em; margin-bottom: 0em; border-top: 0.2em solid #2185D0;" width="100%" align="left">
+            <tr>
+                <td style=" padding: 0.78571429em 0.78571429em; border-top: none; border-left: none;">
+                    <strong>Observações:</strong> {TEXTO} <br/>  
+                </td>
+            </tr>
+        </table>
+        <!--/OBS-->
+        <!--TOTAL-->
+</body>
+</html>
+ <!--/TOTAL-->
+

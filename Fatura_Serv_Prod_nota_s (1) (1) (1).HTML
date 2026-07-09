@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://sistema.otimogestor.com.br/comum/libs/semantic/dist/semantic.min.css" rel="stylesheet">
+</head>
+<style type="text/css">
+    body {
+        font-size: 12px;
+    }
+    .ui.table {
+        margin-top: 0;
+        margin-bottom: 0;
+        border: 2px solid black !important;
+    }
+
+    .copfac {
+    	background-color: #D3D3D3;
+    }
+
+
+    td.centralizado-g {
+        vertical-align: middle !important;
+        font-size: 12px;
+        text-align: center !important;
+    }
+
+    .ui.table td {
+        padding: 5px !important;
+    }
+
+    h5.ui.header {
+        margin-top: 5px !important;
+        margin-bottom: 2px !important;
+        padding-left: 10px;
+
+    }
+
+    .ui.divider:not(.vertical):not(.horizontal) {
+        border-top: 2px dashed black;
+        border-bottom: none;
+    }
+
+	.ui.structured.celled.table tr td, .ui.structured.celled.table tr td {
+		border: 2px solid black !important;
+	}
+
+     .quebra {page-break-after: always;}
+</style>
+<body>
+    <div class="ui container" style="vertical-align: top">
+        <table class="ui table structured celled compact small">
+            <tbody>
+                <tr>
+                    <td class="center aligned" rowspan="2" style="width:150px;">
+                        <img src="{IMAGEMLOGO}" class="center aligned" style="width:150px;">
+                    </td>
+                   
+                    <td>LOCADORA SAREN</td>
+
+                
+                    </td>
+                    <td class="collapsing center aligned" rowspan="2">
+                      <b>  Fatura de Locação: <br> {FATURA} <br> </b>
+                        
+                    </td>  
+
+                </tr>
+
+                    <tr>
+                    <td class="collapsing">
+                        CNPJ: {CNPJ} IE:  {INSCESTADUAL}<br>
+{ENDERECO} - {BAIRRO} - {MUNICIPIO}/{UF} - CEP {CEP}<br>
+                    E-mail: {FILIAL.EMAILFILIAL} - Tel: {TELEFONE}
+                </tr>
+            </tbody>
+        </table>
+
+        <h5 class="ui header"></h5> <br>
+        <h5 class="ui header">Destinatário / Remetente</h5>
+
+        <table class="ui table structured celled compact small">
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        Nome/Razão Social <br>
+                        {CLIENTE.RAZAOSOCIAL}
+                    </td>
+                    <td class="collapsing">
+                        CPF/CNPJ <br>
+                        {CLIENTE.CNPJ}
+                    </td>
+                    <td class="collapsing">
+						CONTRATO <br>
+						{CONTRATO}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Endereço <br>
+                        {CLIENTE.ENDERECO}
+                    </td>
+                    <td class="collapsing">
+                        Bairro <br>
+                        {CLIENTE.BAIRRO}
+                    </td>
+                    <td class="collapsing">
+                        Cep <br>
+                        {CLIENTE.CEP}
+                    </td>
+                    <td rowspan="2" style="widtd: 50px;">
+						Data Emissão <br>
+						<h5 class="ui header">
+							{DATAEMISSAO}
+						</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cidade <br>
+                        {CLIENTE.MUNICIPIO} / {CLIENTE.UF}
+                    </td>
+                    <td class="collapsing">
+                        Telefone <br>
+                        {CLIENTE.TELEFONE}
+                    </td>
+                    <td class="collapsing">
+                        Inscrição Estadual <br>
+                        {CLIENTE.INSCESTADUAL}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 class="ui header"></h5>
+		<br>
+        <table class="ui table structured celled compact small">
+            <tbody>
+                <tr class="copfac">
+                    <td>Fatura</td>
+                    <td>Valor</td>
+                    <td>Vencimento</td>
+                </tr>
+            </tbody>
+            <tbody>
+               <tr> 
+                <td>{FATURA}</td>
+                <td>{VALOREMISSAO}</td>
+                <td>{DATAVENCTO}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+		<br>
+        <h5 class="ui header">LEI 547/9 "O NÃO RECEBIMENTO DO BOLETO NÃO DESOBRIGA O PAGAMENTO PONTUAL"
+"OPERAÇÃO NÃO TRIBUTADA PELO ISS CONFORME LEI COMPLEMENTAR Nº 116 DE 31/07/2003 D.O.U DE 01/08/2003 A PORTARIA SF Nº 074/2003 DO SECRETARIO DE FINANÇAS E
+DESENVOLVIMENTO ECONOMICO - D.O.M.S.P DE 21/10/2003"</h5><br>
+        
+        <table class="ui table structured celled">
+            <tr class="copfac">
+                <h5 class="ui header">Descrição dos Itens Locados:</h5>
+                <br>
+                <br>
+                <br>
+                <table class="ui table unstackable structured celled">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Descrição</th>
+                            <th>Setor</th>
+                            <th>Qtde.</th>
+                            <th>Valor</th>
+                            <th>Val. Total</th>
+                            <!-- <th>Valor Uni.</th>
+                            <th>Valor Total</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	
+   <!--CTPROD-->
+                    <tr>
+                            <td>{PRODUTO.CODIGO}</td>
+                            <td>{PRODUTO.DESCRICAO}</td>
+                            <td>{CTPROD.SETOR}</td>
+                            <td class="right aligned">{CTPROD.PRODQTDEENVFIXO}</td>
+                            <td class="right aligned">{CTPROD.VALOR}</td>
+                            <td class="right aligned">{CTPROD.VALORTOTAL}</td>
+                    </tr>
+  <!--/CTPROD-->
+
+                    </tbody>
+        </table>
+
+        </tbody>
+                </table>
+                
+      <h5 class="ui header"> </h5>
+                <table class="ui table unstackable structured celled">
+                    <thead>
+                        <tr>
+                          
+                            <th>Itens</th>
+                            <th>Valor Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!--CTFTSERV-->
+                            <tr>
+                                <td>{SERVPR.DESCRICAO}</td>
+                                <td class="right aligned">{CTFTSERV.VALOR}</td>
+                             </tr>
+                        <!--/CTFTSERV-->
+                    </tbody>
+                    <tfoot>
+                        <tr> 
+                            <th colspan="1">Valor Total dos itens:</th>
+                            <th class="right aligned">{VALORTOTAL}</th>
+
+                        </tr>
+                    </tfoot>
+                </table> 
+		<br>
+		<h5 class="ui header">Dados Adicionais</h5>
+        <table class="ui table structured celled compact small">
+                <tr>
+                </tr>
+            </tbody>
+            <tbody>
+                <td>
+				{CONTRATO_OBS_FATURA}    <br>
+				
+				</td>
+            </tbody>
+        </table>
+
+		<table class="ui table structured celled">
+        	<tr >
+        	    
+            </tr>
+        </table>
+
+
+
+        <div class="ui divider"></div>
+
+        <table class="ui table structured celled">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="center aligned padding-mini">
+                    </td>
+                    <td class="center aligned sem-margem-bot">
+                        Data do Recebimento. <br>
+                        _________/_________/_______________
+                    </td>
+                    <td class="center aligned sem-margem-bot">
+                        Identificação e assinatura do recebedor. <br>
+                        ________________________________________
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script type="text/javascript">
+    
+    var nodes = document.getElementsByClassName("unitario");
+
+    for (var i = 0; i < nodes.length; i++) {
+        nodes[i].style.display = "none";
+    }
+
+    var nodes = document.getElementsByClassName("valortotal");
+
+    for (var i = 0; i < nodes.length; i++) {
+        nodes[i].style.display = "none";
+    }
+
+</script>
+</html>
+<div class="quebra"></div>

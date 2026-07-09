@@ -1,0 +1,385 @@
+<!--INICIO-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://sistema.otimogestor.com.br/comum/libs/semantic/dist/semantic.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap" rel="stylesheet">
+   	<style>
+   		.quebra { 
+            page-break-after: always !important; 
+        }
+        *{
+        	font-family: 'Changa', sans-serif;
+        	font-size:11px !important;
+        }
+        .bgheader{
+        	background: #e6e6e6 !important;
+        }
+        
+        .hide{
+        	display: none !important;
+        }
+
+        table { page-break-inside:auto; margin-bottom: 10px; }
+		tr    { page-break-inside:avoid; page-break-after:auto; }
+		thead { display:table-header-group }
+		tfoot { display:table-footer-group }
+        
+   	</style>
+</head>
+<body>
+<!--/INICIO-->
+<!--CABECALHO-->
+	<div class="ui container">
+		<div class="ui segments raised">
+			<div class="ui segment form">
+				<div class="fields">
+					<div class="four wide field">
+						<img src="{IMAGEMLOGO}" alt="" class="ui image" style="width: 50% !important;">
+					</div>
+					<div class="eight wide field" style="text-align: center !important;margin-top:25px !important; font-size:13px !important;">
+						 <div>
+						 	<strong style="font-size:13px !important;">{EMPRESA.RAZAOSOCIAL}</strong><br/>
+			                CNPJ: {FILIAL.CNPJ} - IE: {FILIAL.INSCESTADUAL}<br/>
+			                {FILIAL.ENDERECO} - {FILIAL.BAIRRO}  - {FILIAL.MUNICIPIO}/{FILIAL.UF} <br/>
+		                 	CEP: {FILIAL.CEP} <br>
+			                E-mail: {FILIAL.EMAILFILIAL} - Telefone: {FILIAL.FONE}
+			                
+						 </div>
+					</div>
+					<div class="four wide field" style="text-align: center !important;margin-top:25px !important; font-size:13px !important;">
+						<strong> Nº </strong> {CHAMADO}<br>
+						<strong>TIPO </strong> {CHAMADO.TIPO}<br>
+					    <strong> DATA DO DOCUMENTO</strong> {DATACHAMADO}
+					</div>
+				</div>
+			</div>
+			<div class="ui segment form">
+				<div class="fields">
+					<div class="sixteen wide field" style="font-weight: bold;">
+						<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+							<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+								CONTRATANTE
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fields">
+					<div class="sixteen wide field">
+						<table class="ui table very compact celled selectable small black">
+							<tbody>
+								<tr>
+									<td> <strong>Razão Social:</strong> {CLIENTE.RAZAOSOCIAL}</td>
+									<td><strong>CNPJ: </strong>{CLIENTE.CNPJ}</td>
+								</tr>
+								<tr>
+									<td><strong>Endereço: </strong>{CLIENTE.ENDERECO}</td>
+									<td><strong>Municipio/UF: </strong>{CLIENTE.MUNICIPIO}/{CLIENTE.UF}</td>
+								</tr>
+								<tr>
+									<td><strong>Telefone: </strong>{CLIENTE.TELEFONE}</td>
+									<td><strong>Contato: </strong>{CONTATO.NOME}</td>
+								</tr>
+								<tr>
+									<td colspan="1"><strong>Endereço Instalação:</strong> {ENDERECOINSTALACAO.OS}</td>
+									<td> <strong>E-mail:</strong> {CONTATO.EMAIL1}</td>
+								</tr>  
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+			<!--/CABECALHO-->
+			<!--PRODUTO_CONTRATO_CABECALHO_MAO_DE_OBRA-->
+			<table class="ui table very compact celled selectable black small structured">
+				<thead>
+					<tr>
+						<th>Produto</th>
+						<th>Descrição</th>
+						<th>Quantidade</th>
+						<th>Valor Unitário</th>
+						<th>Total</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<!--/PRODUTO_CONTRATO_CABECALHO_MAO_DE_OBRA-->
+					<!--PRODUTO_CONTRATO_MAO_DE_OBRA-->
+					<tr>
+						<td>{CTPROD.PRODUTO}</td>
+						<td>{CTPROD.DESCRICAO}</td>
+						<td>{CTPROD.QUANTIDADE}</td>
+						<td>{CTPROD.UNITARIO}</td>
+						<td>{TOTAL_PROD_MAO_DE_OBRA}</td>
+
+					</tr>
+					<!--/PRODUTO_CONTRATO_MAO_DE_OBRA-->
+					<!--PRODUTO_CONTRATO_RODAPE_MAO_DE_OBRA-->
+				</tbody>
+			</table>
+			<!--/PRODUTO_CONTRATO_RODAPE_MAO_DE_OBRA-->
+			<!--EQUIPAMENTO_CABECALHO-->
+			<div class="ui segment form">
+				<div class="fields">
+					<div class="sixteen wide field" style="font-weight: bold;">
+						<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+							<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+								EQUIPAMENTOS
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fields">
+					<div class="sixteen wide field">
+					    <table class="ui table very compact celled selectable small red">
+					        <thead>
+					     
+					            <tr>
+					              
+					                <th>Código Produto</th>
+					                <th>Descrição Produto</th>
+					                <th>Equipamento</th>
+					                <th>Equipamento Fabricante</th>
+					               
+					            </tr>
+					        </thead>
+					        <tbody>
+					<!--/EQUIPAMENTO_CABECALHO-->
+					<!--EQUIPAMENTO-->      
+					            <tr>
+					            	<td style="width: 10%">{PRODUTO.CODIGO}</td>
+					                <td style="width: 50%"> {PRODUTO.DESCRICAO}</td>
+					                <td style="width: 20%">{SERIEEMPRESA}</td>
+					                <td style="width: 20%">{SERIEFABRICANTE}</td>
+					              
+					           </tr>
+					<!--/EQUIPAMENTO-->      
+					<!--EQUIPAMENTO_RODAPE-->      
+					        </tbody>
+					       
+					    </table>
+					</div>
+				</div>
+			</div>
+			<!--/EQUIPAMENTO_RODAPE-->
+			<!--VENDA_CABECALHO-->
+			<div class="ui segment form">
+				<div class="fields">
+					<div class="sixteen wide field" style="font-weight: bold;">
+						<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+							<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+								PRODUTOS
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fields">
+					<div class="sixteen wide field">
+					
+						<table class="ui table very compact celled selectable structured small green">
+							<thead>
+								<tr>
+									<th>Produto / Descrição</th>
+									<th>Quantidade</th>
+									<th>Unidade</th>
+									<th>Valor Unitário</th>
+									<th>Total</th>
+									
+								</tr>
+							</thead>
+
+							<tbody>
+								<!--/VENDA_CABECALHO-->
+								<!--VENDA_CORPO-->
+								<tr>
+									<td>{PROD.CODIGO} - {PROD.DESC}</td>
+									<td>{PROD.QTDE}</td>
+									<td>{PROD.UND}</td>
+									<td>{PROD.PRECOUNIT}</td>
+									<td>{PROD.PRECOTOT}</td>
+									
+								</tr>
+								<!--/VENDA_CORPO-->
+								<!--VENDA_RODAPE-->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!--/VENDA_RODAPE-->
+			<!--SOLICITACAO-->
+			<div class="ui segment" style="min-height:30px;">
+				<h4 class="ui header">Solicitação</h4>
+				{SOLICITACAO}
+			</div>
+			<!--/SOLICITACAO-->
+
+			<!--LAUDO-->
+			<div class="ui segment" style="min-height:30px;">
+				<h4 class="ui header">Laudo</h4>
+				{LAUDO}
+			</div>			
+			<!--/LAUDO-->
+
+			<!--CONCLUSAO-->
+			<div class="ui segment" style="min-height:30px;">
+				<h4 class="ui header">Conclusão</h4>
+				{CONCLUSAO}
+			</div>
+			<!--/CONCLUSAO-->
+
+
+			<!--OBSERVACAO-->
+			<div class="ui segment" style="min-height:30px;">
+				<h4 class="ui header">Observação</h4>
+				{OBSERVACAO}
+			</div>
+			<!--/OBSERVACAO-->
+			<!--TIPOCHECAGEM_TOPO-->
+
+			<div class="imprimecondicoes"></div>
+			
+			<div class="ui segment form">
+				<div class="fields">
+					<div class="eight wide field" style="font-weight: bold;">
+						<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+							<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+								Checagem
+							</div>
+						</div>
+					</div>
+				
+					<div class="eight wide field" style="font-weight: bold;">
+
+						<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+							<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+								Técnicos
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fields">
+					<div class="eight wide field">
+		                <table class="ui table celle compact celled black" id="listaTipoChecagem">
+		            	        <thead>
+		                            <tr id="theadTipoChecagem">
+		                                <th>Descrição</th>
+		                                <th>Checagem</th>
+		                                <th>Descrição</th>
+		                                <th>Checagem</th>
+									</tr>
+		                        </thead>
+		                <tbody id="listaChecagem">
+					<!--/TIPOCHECAGEM_TOPO-->
+					<!--TIPOCHECAGEM-->
+							<tr>
+		                        <td><span>{TPCHECAG.DESCRICAO}</span></td>
+		                        <td><input type="checkbox"></td>
+								<td>{TPCHECAG.CONTEUDO}</td>
+								<td>{OSTPCHEC.OBSERVACAO}</td>											
+		                    </tr>		
+					<!--/TIPOCHECAGEM-->
+					<!--RODAPE--> 
+							</tbody>
+						</table>
+					</div>
+				
+				
+					<div class="eight wide field">
+						<div class="tabletec">
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>	
+		  
+		 	<div class="hide"  id="condicoesComerciais">
+				<div class="ui segment form">
+					<div class="fields">
+						<div class="sixteen wide field" style="font-weight: bold;">
+							<div class="russo bgheader text-color ajust-padding" style="border:1px solid #ccc;border-top-left-radius:12px !important;">
+								<div style="padding-left:5px !important;margin-bottom: 5px !important;">
+									CONDIÇÕES COMERCIAIS
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="fields">
+						<div class="sixteen wide field">   
+						    <table class="ui table very compact celled selectable small blue">
+						         <tr>
+						            <td style="width: 30%;">Forma de Pagamento</td>
+						            <td style="width: 70%">{CONDPAG.DESCRICAO}</td>
+						        </tr>
+						     </table>
+						 </div>
+					</div>
+				</div>
+			</div>
+			<div class="ui segment form hide" id="divtec">
+				
+				<div class="fields">
+					<div class="sixteen wide field">   
+						<table class="ui table very compact celled selectable small yellow">
+							<thead>
+								<tr>
+									<th>Técnico 1</th>
+									<th>Observação</th>
+									<th>Técnico 2</th>
+									<th>Observação</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{TECNICO1}</td>
+									<td>{SERVICO1}</td>
+									<td>{TECNICO2}</td>
+									<td>{SERVICO2}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			
+				<div class="ui segment secondary center aligned sempaddingtb"><b>Aprovação</b></div>
+				
+						<br>
+						<br>
+						<br>
+						<div class="ui grid center aligned sempaddingtb">
+							<div class="six wide column">
+								<p style="width: 95%; border-bottom: 1px solid #000; margin-left: 10px;"></p>
+								<p>{FILIAL.RAZAOSOCIAL}</p>
+							</div>
+							<div class="six wide column center aligned">
+								<p style="width: 95%; border-bottom: 1px solid #000; margin-left: 10px;"></p>
+								<p>{CLIENTE.RAZAOSOCIAL}</p>
+							</div>
+				</div>
+			
+		</div>
+	</div>	
+
+	<!--/RODAPE-->
+	<!--FIM-->
+	<script src="https://sistema.otimogestor.com.br/comum/libs/jquery/jquery-2.1.4.min.js"></script>
+</body>
+<script>
+	$(document).ready(function(){
+		let condicoesComerciais = $("#condicoesComerciais").html();
+			$(".imprimecondicoes").append(condicoesComerciais);
+
+		let tecnicos = $("#divtec").html();
+			$(".tabletec").html(tecnicos);	
+	});
+</script>
+</html>
+<!--/FIM-->

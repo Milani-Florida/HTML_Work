@@ -1,0 +1,1936 @@
+<TITLE>
+ogp002a1-</TITLE>
+<script language="javascript">
+window.defaultStatus="ogp002a1-";
+</script>
+<link rel="shortcut icon" type="image/png" href="/comum/site/img/favicon.png"/>
+<link href="/comum/libs/brc/style.css?data=080820221200"  rel="stylesheet">
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<head>
+    <meta charset="windows-1252">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>(SAREN) &bull; Ótimo Gestor</title>
+    <link rel="shortcut icon" type="image/png" href="/comum/site/img/favicon.png" />
+    <!-- Vendor CSS -->
+    <link href="/comum/libs/brc/normalize.css" rel="stylesheet">
+    <link href="/comum/libs/semantic/dist/semantic.min.css" rel="stylesheet">
+    <link href="/comum/site/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+        rel="stylesheet">
+    <link href="/comum/alertifyjs/alertify.min.css" rel="stylesheet">
+    <link href="/comum/alertifyjs/semantic.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/comum/libs/introjs/css/introjs.min.css" />
+    <script type="text/javascript" src="/comum/libs/introjs/js/intro.min.js"></script>
+    <!-- CSS -->
+    <style type="text/css">
+        .btn-close {
+            z-index: 1;
+            margin: 0;
+            font-size: 150%;
+        }
+
+        .fg-line:not([class*=has-]):after {
+            background: #a6ca46;
+        }
+
+        .tab-nav[data-tab-color=green]>li>a:after {
+            background: #a6ca46;
+             !important
+        }
+
+        .tab-nav li>a {
+            background-color: rgb(235, 234, 234);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-size: 11px;
+        }
+
+        .tab-nav li.active>a {
+            background-color: rgba(166, 202, 70, 0.48);
+        }
+
+
+        .c-green-og {
+            color: #a6ca46 !important;
+        }
+
+        .caminho {
+            height: 20px;
+            vertical-align: middle;
+            padding: 0 15px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        iframe {
+            width: 100%;
+            border: none;
+        }
+
+        .bgm-white {
+            background-color: #fff !important
+        }
+
+        .c-white {
+            color: #fff !important
+        }
+
+        .bgm-black {
+            background-color: #000 !important
+        }
+
+        .c-black {
+            color: #000 !important
+        }
+
+        .bgm-brown {
+            background-color: #795548 !important
+        }
+
+        .c-brown {
+            color: #795548 !important
+        }
+
+        .bgm-pink {
+            background-color: #E91E63 !important
+        }
+
+        .c-pink {
+            color: #E91E63 !important
+        }
+
+        .bgm-red {
+            background-color: #F44336 !important
+        }
+
+        .c-red {
+            color: #F44336 !important
+        }
+
+        .bgm-blue {
+            background-color: #2196F3 !important
+        }
+
+        .c-blue {
+            color: #2196F3 !important
+        }
+
+        .bgm-purple {
+            background-color: #BA68C8 !important
+        }
+
+        .c-purple {
+            color: #BA68C8 !important
+        }
+
+        .bgm-deeppurple {
+            background-color: #673AB7 !important
+        }
+
+        .c-deeppurple {
+            color: #673AB7 !important
+        }
+
+        .bgm-lightblue {
+            background-color: #03A9F4 !important
+        }
+
+        .c-lightblue {
+            color: #03A9F4 !important
+        }
+
+        .bgm-cyan {
+            background-color: #00BCD4 !important
+        }
+
+        .c-cyan {
+            color: #00BCD4 !important
+        }
+
+        .bgm-teal {
+            background-color: #009688 !important
+        }
+
+        .c-teal {
+            color: #009688 !important
+        }
+
+        .bgm-green {
+            background-color: #4CAF50 !important
+        }
+
+        .c-green {
+            color: #4CAF50 !important
+        }
+
+        .bgm-lightgreen {
+            background-color: #8BC34A !important
+        }
+
+        .c-lightgreen {
+            color: #8BC34A !important
+        }
+
+        .bgm-lime {
+            background-color: #CDDC39 !important
+        }
+
+        .c-lime {
+            color: #CDDC39 !important
+        }
+
+        .bgm-yellow {
+            background-color: #FFEB3B !important
+        }
+
+        .c-yellow {
+            color: #FFEB3B !important
+        }
+
+        .bgm-amber {
+            background-color: #FFC107 !important
+        }
+
+        .c-amber {
+            color: #FFC107 !important
+        }
+
+        .bgm-orange {
+            background-color: #FF9800 !important
+        }
+
+        .c-orange {
+            color: #FF9800 !important
+        }
+
+        .bgm-deeporange {
+            background-color: #FF5722 !important
+        }
+
+        .c-deeporange {
+            color: #FF5722 !important
+        }
+
+        .bgm-gray {
+            background-color: #9E9E9E !important
+        }
+
+        .c-gray {
+            color: #9E9E9E !important
+        }
+
+        .bgm-bluegray {
+            background-color: #607D8B !important
+        }
+
+        .c-bluegray {
+            color: #607D8B !important
+        }
+
+        .bgm-indigo {
+            background-color: #3F51B5 !important
+        }
+
+        #caminhaPrograma {
+            float: right;
+            text-align: right;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        body {
+            padding-top: 40px;
+        }
+
+        #abaProgramas {
+            overflow-x: auto;
+            border: none !important;
+            border-radius: 0 !important;
+        }
+
+        #abaProgramas .item {
+            padding: 10px !important;
+            border-bottom: 2px solid #7daf42;
+        }
+
+        .iconefechar {
+            margin-right: 0 !important;
+            margin-left: 4px !important;
+            margin-top: -2px !important;
+            margin-bottom: -2px !important;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .notmobile {
+                display: none;
+                visibility: hidden;
+            }
+        }
+
+        .topo {
+            top: 0;
+            position: absolute;
+        }
+
+        #qtdNotification {
+            top: 2px !important;
+            left: 80% !important;
+        }
+
+        .md-chat-widget-btn-container {
+            display: none;
+        }
+
+        .item.lido {
+            background-color: rgba(0, 0, 0, 0.03) !important;
+            font-weight: bold !important;
+            color: rgba(0, 0, 0, 0.95) !important;
+        }
+
+        .menu-scroll {
+            overflow-y: auto; 
+            height: 300px;
+        }
+
+        .ruim::before {
+            content: "\1F620";
+            font-size: xx-large;
+        }
+        
+        .medio::before {
+            content: "\1F610";
+            font-size: xx-large;
+        }
+
+        .excelente::before {
+            content: "\1F600";
+            font-size: xx-large;
+        }
+
+        .ruim {
+            background-color: #ff6464;
+        }
+
+        .medio {
+            background-color: #ffff0082;
+        }
+
+        .excelente {
+            background-color: #6dff6d;
+        }
+
+        #notaNps .item.vermelho {
+            position: relative;
+            --accent-color: #ff6464;
+            z-index: 1;
+            border-bottom: 3px solid #ff6464;
+        }
+
+        #notaNps .item.amarelo {
+            position: relative;
+            --accent-color: #ffff0082;
+            z-index: 1;
+            border-bottom: 3px solid #ffff0082;
+        }
+
+        #notaNps .item.verde1 {
+            position: relative;
+            --accent-color: #6dff6d;
+            z-index: 1;
+            border-bottom: 3px solid #6dff6d;
+        }
+
+        #notaNps .item.vermelho::before,
+        #notaNps .item.amarelo::before,
+        #notaNps .item.verde1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            background-color: var(--accent-color);
+            width: 100%;
+            height: 100%;
+
+            transition: transform 300ms ease-in-out;
+            transform: scaleY(0);
+            transform-origin: bottom;
+        }
+
+        #notaNps .item.vermelho:hover::before,
+        #notaNps .item.amarelo:hover::before,
+        #notaNps .item.verde1:hover::before,
+        #notaNps .item.vermelho:focus::before, 
+        #notaNps .item.amarelo:focus::before, 
+        #notaNps .item.verde1:focus::before {
+            transform: scaleY(1);
+        }
+
+        .separador {
+            position: relative;
+            content: '';
+            top: 0%;
+            right: 0px;
+            width: 1px;
+            background: rgba(34, 36, 38, 0.1);
+        }
+
+        .draggable.dragging {
+            opacity: .5;
+        }
+
+    </style>
+    <script>
+        function resizeIframe(a) {
+
+            if (a.src && a.src.indexOf("ftp601a2") > 0) {
+                a.style.height = "2000px";
+
+            } else {
+                if (a.id != "iframebaseConhecimento"){
+                    a.style.height = (window.innerHeight - 63) + "px";
+                }else{
+                    a.style.height = ($(window).height()-60)+'px';
+                }
+            }
+        }
+    </script>
+    <script src="/comum/libs/pusher/pusher.min.js"></script>
+    <script type="text/javascript" src="/comum/libs/moment/moment-with-locales.js"></script>
+    <script type="text/javascript" src="/comum/js/modal-message.js"></script>
+</head>
+
+<body>
+    <div class="ui grid notmobile">
+        <div class="column">
+            <div class="ui menu top fixed stackable" id="menu-superior">
+                <div class="ui fluid menu tiny" data-bind="foreach: _.sortBy(tabList(), (item) => {
+                    return item.ordem();
+                })" id="abaProgramas" ondrop="drop(event);" ondragover="allowDrop(event);">
+                    <a class="item draggable" draggable="true" data-bind="click: $root.abaSeleciona, attr: { 'data-tab': idTab, id: idTab }" ondragstart="drag(event)">
+                        <i data-bind="visible: icone.length > 0, attr: { class: 'icon ' + icone }"></i>
+                        <span data-bind="text: titulo() + ' '"></span>
+                        <i class="close large red icon iconefechar"
+                            data-bind="visible: podeFechar, click: $root.fecharAba"></i>
+                    </a>
+                </div>
+                <div class="ui dropdown icon item" id="btnNotification">
+                    <i class="bell outline icon"></i>
+                    <div class="floating ui red mini label circular" id="qtdNotification" data-bind="text: $root.qtdMensagens"></div>
+                    <div class="menu" data-bind="css:{'menu-scroll': $root.qtdMensagens() > 0}">
+                        <!-- ko foreach: mensagensOrdenadas -->
+                        <a class="item" data-bind="click: $root.mostraMensagem, css:{'lido': dataleitura() == '0000-00-00'}">
+                            <h4 class="ui header">
+                                <span data-bind="text: titulo"></span>
+                                <span data-bind="visible: dataleitura() == '0000-00-00'">
+                                    <span class="ui compact label green">Novo</span>
+                                </span>
+                                </h4>
+                            <p data-bind="text: mensagem.substr(0, 80) + '...'"></p>
+                        </a>      
+                        <div class="divider"></div>
+                        <!-- /ko -->
+                        <div class="item" data-bind="text: $root.qtdMensagens() == 0 ? 'Você não tem novas mensagens' : ''"></div>
+                        <div class="ui segment secondary form right aligned" style="position: sticky; bottom: 0; border-radius: 0; z-index: 100; margin: 0;">    
+                            <button type="button" class="ui button icon labeled green small compact" data-bind="click: $root.verTodasMensagens">
+                                <i class="envelope open icon"></i>Ver todas as mensagens
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown icon item" data-bind="click: $root.interagir"
+                    id="btnChamado" style="display: none">
+                    <i class="icon mail"></i>
+                    <div class="floating ui yellow mini label circular" id="qtdChamado"  style="display: none">0</div>
+                </div>
+                <div class="item icon" data-bind="click: $root.favorito">
+                    <i class="icon star "
+                        data-bind="css: {'outline': $root.abaSelecionada() == null || ($root.abaSelecionada() != null && !$root.abaSelecionada().favorite()) }"></i>
+                </div>
+                <div class="item icon" data-bind="click: printAba">
+                    <i class="icon print"></i>
+                </div>
+                <div class="ui right aligned dropdown icon item hide">
+                    <i class="book icon"></i> &nbsp; Caderno
+                    <div class="menu" data-bind="foreach: posts">
+                        <a class="item" href="" data-bind="attr: {href: link}" target="_blank">
+                            <i class="icon caret right"></i> <span data-bind="html: title.rendered"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="ui right aligned dropdown icon item">
+                    <img src="/comum/site/img/engrenagem-logo-erp.png" style="margin-right: 5px; width: 24px;" />
+                    <strong>(2597 - SAREN)</strong> <i class="icon caret down" style="margin-left: 5px;"></i>
+                    <div class="menu">
+                        <a class="item" target="_blank" href="https://monitor.tecnospeed.com.br/?loginAuth=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJJZCI6IjBhY2Q3MWE2LWNiY2ItNDllZC1hN2FmLTk2Mjg0ZTFlMjFlMiIsImVtYWlsIjoiZGlvZ28uYXJhZG9Ab3RpbW9nZXN0b3IuY29tLmJyIiwieF9hcGlfa2V5IjoiNWM1ZmZkM2IzYjZhMWQ1ZGViODhmOWRkOGZhNmU0NDUiLCJjcmVhdGVkIjoxNjA0Njc0MTg4MjAzfSwiaWF0IjoxNjA0Njc0MTg4fQ.ObOEzPSwKsbrnIrFXVGl4Mj8VxGRHCYwYssBCU6Hd0Y">
+                            <i class="globe icon"></i>Disponibilidade Sefaz
+                        </a>
+                        <div class="item " onclick="abreMonitorBoleto()" >
+                            <i class="icon dollar"></i> Faturas e Boletos
+                        </div>
+                        <div class="item" onclick="toggleDarkTheme();">
+                            <i class="magic icon"></i> Tema Escuro
+                        </div>
+                        <div class="item" data-bind="click: $root.maximizar, visible: $root.dataFim() == ''">
+                            <i class="icon expand"></i> Maximizar
+                        </div>
+                        <div class="item" onclick="abrirDeskManager('2597', 'MAURICIO', '43515');">
+                            <i class="ticket alternate icon"></i> Chat e Chamado
+                        </div>
+                        <div class="item" onclick="window.open('https://anydesk.pt/download');">
+                            <i class="icon download"></i> Download AnyDesk
+                        </div>
+                        <div class="item" data-bind="click: $root.fecharTodasAba">
+                            <i class="icon close red inverted circular small fitted"></i> Fechar Abas
+                        </div>
+                        <div class="item" onclick="finalizaAplicacao()">
+                            <i class="icon sign out"></i> Sair
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui grid mobile only topo">
+        <div class="column">
+            <div class="ui two item menu top fixed" id="menu-superior">
+                <div class="ui dropdown item">
+                    Menu <i class="icon caret down" style="margin-left: 5px;"></i>
+                    <div class="menu" data-bind="foreach: tabList" id="abaProgramas">
+                        <a class="item" data-bind="click: $root.abaSeleciona, attr: {'data-tab': idTab}">
+                            <i data-bind="visible: icone.length > 0, attr: { class: 'icon ' + icone }"></i>
+                            <span data-bind="text: titulo() + ' '"></span>
+                            <i class="close large red icon iconefechar"
+                                data-bind="visible: podeFechar, click: $root.fecharAba"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ui dropdown item">
+                    <img src="/comum/site/img/logo-mobile.png" style="margin-right: 5px;" />
+                    <strong>(2597 - SAREN)</strong> <i class="icon caret down" style="margin-left: 5px;"></i>
+                    <div class="menu">
+                        <div class="item" data-bind="click: $root.reload">
+                            <i class="icon refresh"></i> Recarregar
+                        </div>
+                        <div class="item icon" data-bind="click: printAba">
+                            <i class="icon print"></i> Imprimir
+                        </div>
+                        <div class="item" data-bind="click: $root.fecharTodasAba">
+                            <i class="icon close"></i> Fechar Abas
+                        </div>
+                        <div class="item" data-bind="click: $root.maximizar">
+                            <i class="icon expand"></i> Maximizar
+                        </div>
+                        <div class="item"
+                            onclick="window.open('https://sistema.otimogestor.com.br/chat/chat.php?acid=0bfba','','width=590,height=760,left=0,top=0,resizable=yes,menubar=no,location=no,status=yes,scrollbars=yes');">
+                            <i class="icon comment"></i> Chat
+                        </div>
+                        <div class="item" onclick="finalizaAplicacao()">
+                            <i class="icon sign out"></i> Sair
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-bind="foreach: tabList" id="tabFrame">
+        <div data-bind="attr: {id: idTab, 'data-tab': idTab }, css: {'inverted': $root.darkTheme() == true}" class="ui tab segment" 
+            style="padding: 0; margin-top: 0;">
+        <div>
+            <iframe  allow="clipboard-read; clipboard-write" data-bind="attr: { src: caminho, id: 'iframe' + idTab(), onload:(idTab() != 'baseConhecimento' ? 'resizeIframe(this);' : ''), scrolling:(idTab() == 'baseConhecimento' ? 'yes' : 'no')}" height="1200px" scrolling="no" style="vertical-align: top;">
+            </iframe>
+        </div>     
+        </div>     
+    </div>
+    <div id="caminho" class="bgm-green c-white caminho">
+        <strong id="caminhaPrograma"></strong>
+    </div>
+    <div class="ui modal small" id="framePesquisa">
+        <i class="close icon"></i>
+        <div class="header">Em uma escala de 1 a 10, o quanto você recomendaria a Ótimo Gestor para um amigo ou colega?
+        </div>
+        <div class="content">
+            <div class="ui grid one column">
+                <div class="column center aligned">
+                    <div class="ui pagination menu" id="notaNps" style="margin-bottom: 20px;">
+                        <a href="javascript:void(0)" class="item vermelho">1</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item vermelho">2</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item vermelho">3</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item vermelho">4</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item vermelho">5</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item vermelho">6</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item amarelo">7</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item amarelo">8</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item verde1">9</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="item verde1">10</a>
+                        <a class="separador"></a>
+                        <a href="javascript:void(0)" class="emoji medio"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form" id="pergundaNps" style="display: none;">
+                <h3 class="ui header">Por que você deu esta nota?</h3>
+                <div class="fields">
+                    <div class="four wide field">
+                        <select  onfocus="window.onenter('ogp002a1',this.name,143515432216)" class="noconv" size="4" name="MOTV" id="MOTV" multiple>
+                            <!--IMPMOTV-->
+                        </select>
+                    </div>
+                </div>
+                <h3 class="ui header">Observação (opcional)</h3>
+                <div class="one field">
+                    <div class="field">
+                        <textarea  onfocus="window.onenter('ogp002a1',this.name,143515432216)" autofocus="autofocus" rows="6" maxlength="500" id="obsPesquisa"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="actions" id="enviar" style="display: none;">
+            <button type="button" class="ui button green" id="enviarPesquisa"><i
+                    class="icon check"></i>Enviar</button>
+        </div>
+    </div>
+    <div class="ui modal fullscreen" id="frameCaderno">
+        <i class="close icon"></i>
+        <div class="header"></div>
+        <div class="content" style="padding: 0;">
+            <iframe src="" frameborder="0" height="600"></iframe>
+        </div>
+    </div>
+
+    <div class="ui modal large" id="alterarSenha">
+        <div class="header">Alterar Senha</div>
+        <div>
+            <iframe src="" id="frameAlterarSenha" frameborder="0" style="min-height: 420px; width: 100%;"></iframe>
+        </div>
+    </div>
+    <div class="ui modal small" id="avisoAlterarSenha">
+        <div class="content" style="">
+            <h1 class="ui center aligned icon header">
+                <i class=" key icon"></i>
+                Sua senha expira em 0 dia(s)!
+            </h1>
+        </div>
+        <div class="actions" id="actionsAvisoSenha">
+            <div class="ui approve green button">Trocar Agora</div>
+            <div class="ui cancel button">Mais tarde</div>
+        </div>
+    </div>
+
+    <div style="position: fixed; bottom: 0; left: 0;" data-bind="visible: $root.dataFim() != ''"><div class="ui label icon" style="padding:4px !important; border-radius: unset;" data-bind="css:{'red': $root.tempoRestante() <= 600, 'orange': $root.tempoRestante() <= 3600 && $root.tempoRestante() > 600, 'green' :  $root.tempoRestante() > 3600 }"><i class="icon clock outline"></i> <span data-bind="timerCheck: $root.dataFim"></span></div></div>
+    <div class="ui modal small" id="modalVideo">
+        <i class="close icon"></i>
+        <div class="content">
+            <div class="ui embed" data-source="youtube" data-id="d4sWG_IhBT0" autoplay></div>
+        </div>
+    </div>
+    <div class="ui modal small" id="modalImagem">
+        <i class="close icon"></i>
+        <div class="content">
+            <img src="/comum/imagens/bb-api.png" style="cursor: pointer;" width="100%" onclick="abrirBlog()">
+        </div>
+    </div>
+    <div class="ui modal large" id="modalAviso">
+        <div class="header">
+            <div class="ui label orange huge">
+                Manutenção
+            </div>
+            <button class="ui button black compact icon labeled right floated" onclick="$('#modalAviso').modal('hide')"><i class="close icon"></i> Fechar</button>
+        </div>
+        <div class="content">
+           Prezado cliente, informamos que no dia 23/02/2024 (sexta-feira) aproximadamente das 20:00 até 22:00, haverá uma manutenção programada, com isso o ERP ficará inacessível.
+           <br>
+           <br>
+           Agradecemos a compreensão.
+           <br>
+            Equipe Eloca.
+        </div>
+    </div>
+    <div class="ui modal small" id="modalMensagens" data-bind="with: mensagemAtual">
+        <i class="close icon"></i>
+        <div class="ui header" data-bind="text: titulo"></div>
+        <div class="content">
+            <p data-bind="text: mensagem"></p>
+        </div>
+        <div class="actions">
+            <span data-bind="visible: titulobotao != ''">
+                <button type="button" class="ui button blue small compact" data-bind="click: $root.acaoMensagem, text: titulobotao"></button>
+            </span>
+        </div>
+    </div>
+    <div class="ui modal hide" id="comunicadoCBE" style="height: 85%; display: flex; justify-content: center; width: auto;">
+        <i class="close icon"></i>
+        <img src="/comum/imagens/comunicado-cbe-integra.png" height="100%"/>
+    </div>
+    <!-- Javascript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/comum/libs/jquery/jquery-2.1.4.min.js"></script>
+    <script src="/comum/libs/semantic/dist/semantic.min.js"></script>
+    <script src="/comum/site/vendors/ko/knockout-3.4.0.js"></script>
+    <script src="/comum/site/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/comum/alertifyjs/alertify.min.js"></script>
+    <script src="/comum/libs/brc/knockout.mapping-latest.js"></script>
+    <script src="/comum/libs/brc/lodash.min.js"></script>
+    <script src="/comum/libs/brc/api.js?v=202003301450"></script>
+    <script type="text/javascript">
+
+        function abrirMovidesk(empresa, usuario) {
+            $.get('/cgi-bin/exec.cgi?PRG=ogp002a1&ISAJAX=S&ACAO=45', function (data) {
+                window.open(`https://otimogestor.movidesk.com/Account/Authenticate?token=cb7d0731-4a85-489e-a066-30c5e08c094c&userName=${empresa}_${usuario}&password=${data}`);
+                
+                // var movidesk = { 
+                //     idTab: ko.observable("movidesk"),
+                //     titulo: ko.observable("Chamados"),
+                //     caminho: ko.observable(`https://otimogestor.movidesk.com/Account/Authenticate?token=cb7d0731-4a85-489e-a066-30c5e08c094c&userName=${empresa}_${usuario}&password=${data}`),
+                //     podeFechar: ko.observable(true),
+                //     favorite: ko.observable(false),
+                //     icone: "ticket",
+                //     path: ""
+                // };
+                // view.tabList.push(movidesk);          
+                // view.abaSeleciona(movidesk, null);
+            });
+        }
+
+        function abrirDeskManager(empresa, logname, recnum) {
+            const body = document.body;
+            $("#formDeskManager").remove();
+            const form = document.createElement("form");
+            const prefixo = document.createElement("input");
+            const caminho = document.createElement("input");
+            const login = document.createElement("input");
+            const senha = document.createElement("input");
+
+            prefixo.name = "desk_prefixo";
+            prefixo.value = "eloca";
+            prefixo.type = "hidden";
+            caminho.type = "hidden";
+            caminho.name = "desk_caminho";
+            login.type = "hidden";
+            login.name = "desk_login";
+            login.value = `${empresa}_${logname}`;
+            senha.type = "hidden";
+            senha.name = "desk_senha";
+            senha.value = `${empresa}_S3nhA#_${recnum}`;
+            form.name = "deskmanager_logar";
+            form.action = "https://eloca.desk.ms/ext/portal/logar/?Portal";
+            form.method = "POST";
+            form.target = "_blank";
+            form.id = "formDeskManager";
+            $(form).addClass('hide');
+
+            form.append(prefixo);
+            form.append(caminho);
+            form.append(login);
+            form.append(senha);
+
+            body.append(form);
+
+            form.submit();
+        }
+
+        function toggleDarkTheme() {
+            var tema = 'dark';
+            
+            if (localStorage.getItem("theme") == 'dark') tema = ''; 
+            
+            localStorage.setItem("theme", tema);
+
+            checkDarkTheme(tema);
+
+            $("#iframemenu")[0].contentWindow.checkTheme();
+
+        }   
+        
+        function abreMonitorBoleto() {
+            abrirAbaMenu('OGP100A1', 'Monitor de Boletos', null, null, '/financeiro/monitor-boletos');
+        }
+
+        function checkDarkTheme(tema) {
+            if (tema == 'dark') { setDarkTheme() } else { removeDarkTheme() };
+        }
+
+        checkDarkTheme(localStorage.getItem("theme"));
+
+        function setDarkTheme() {
+            $(".ui.menu").addClass("inverted");
+            $(".ui.table").addClass("inverted");
+            $(".ui.segment").addClass("inverted");
+        }
+
+        function removeDarkTheme() {
+            $(".ui.menu").removeClass("inverted");
+            $(".ui.table").removeClass("inverted");
+            $(".ui.segment").removeClass("inverted");
+        }
+        alertify.defaults.transition = "zoom";
+        alertify.defaults.theme.ok = "ui positive button";
+        alertify.defaults.theme.cancel = "ui black button";
+        var api_token = dadosApi.apiToken;
+
+        var travarSair = true;
+        const domain = window.location.host;
+        const bkp = (domain.indexOf("ogsql.") > -1 || domain.indexOf("bkp.") > -1 || domain.indexOf("homologacao.otimogestor.com.br") > -1) ? true : false;
+        const develop = (domain.indexOf("develop.otimo") > -1) ? true : false;
+        const beta = (domain.indexOf("beta.otimo") > -1) ? true : false;
+        
+        var subDomain = '';
+                    
+        if (bkp) subDomain = 'sandbox-';
+        if (develop || beta) subDomain = 'develop-';
+        if (beta) $("#menu-superior,#abaProgramas").addClass("inverted violet");
+
+        function clearCookie() {
+            var data = new Date(1900,0,01)
+            document.cookie = `teste=''; expires=${data}; path=/;`;
+            document.cookie = `idog=''; expires=${data}; path=/;`;
+        }
+
+        function verificaMenu() {
+        }
+
+        //var usuarioExterno = false;
+
+        $("div.item[data-href]").click(function (e) {
+            $("#frameCaderno div.header").text($(this).text().trim());
+            $("#frameCaderno iframe").attr('src', $(this).data("href"));
+            $("#frameCaderno").modal('show');
+        });
+
+        $('.ui.dropdown').dropdown();
+
+        $('.tabular.menu .item').tab();
+
+        var view;
+
+        var telasAbertas = 1;
+
+        var channelUser;
+        var channelPDV;
+        var pusher;
+
+        serialize = function (obj) {
+
+            var str = [];
+
+            for (var p in obj) {
+                if (obj.hasOwnProperty(p)) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+            }
+
+            return str.join("&");
+        }
+
+        function atualizaMenu() {
+            for (var i = 0; i < view.tabList().length; i++) {
+                if (view.tabList()[i].idTab().toUpperCase().indexOf('MENU') >= 0) {
+                    aba = view.tabList()[i];
+                    $(`#iframe${aba.idTab()}`)[0].contentWindow.location.reload();
+                } 
+            }
+        }
+
+        function fecharTela(programa) {
+            for (var i = 0; i < view.tabList().length; i++) {
+                if (view.tabList()[i].idTab().toUpperCase().indexOf(programa.toUpperCase()) >= 0) {
+                    aba = view.tabList()[i];
+                    view.fecharAba(aba);
+                } 
+            }
+        }
+
+        function abrirAbaMenu(programa, descricao, path, parans, rota) {
+
+            var abaJaAberta = false;
+            var selecionarAba = "";
+            /*
+            *
+            - PROGRAMA(S) BLOQUEADOS NÃO ABRIR MAIS DE UMA ABA.
+            *
+            *******************************************
+            *SCP033A1 - GERA FATURAMENTO SERVICO
+            *APP035A1 - Monitor das Ordens de Produção.
+            *CEP031A1 - Liberação de NF
+            *CEP044A1 - Liberação dos Pedidos de Compra
+            *******************************************
+            */  
+            var programas = ["SCP033A1","APP035A1","CEP031A1","FFP040A1","FTP441A1","FFP050A1","CEP107A1", "ACP044A1"];
+            programa = programa.toUpperCase();
+
+            if (programas.indexOf(programa) >= 0) {
+                for (var i = 0; i < view.tabList().length; i++) {
+                   
+                    if (view.tabList()[i].idTab().indexOf(programa) >= 0) {
+                        selecionarAba = view.tabList()[i];
+                        abaJaAberta = true;
+                    } 
+                }
+            }
+
+            var closeParentTab = false;
+            if (programa.toLowerCase() == "ftp020a1") {
+                // 2427, // INKAJET - Pedido Simples integrado 
+                // 2493, // BEERLOG - Pedido Simples integrado 
+
+                // var empresasNovoPed = [
+                    // 2504, // LOKMAIS  - Erro de natureza
+                    // 2526, // MESD II - Duplicidade de pedido
+                // ];
+                
+                if ('S' == ' ') {
+                    rota = '/vendas/pedido';
+                    
+                    if (parans) {
+                        if (parans.PEDIDO) parans.pedido = parans.PEDIDO;
+                        if (parans.SEQ >= 0) parans.seq = parans.SEQ;
+                    }
+                }
+            }
+
+            if (('2597' == '2120' || '2597' == '2365') && programa.toLowerCase() == "cep040a1") {
+                rota = '';
+                programa = 'csp128a1';
+            }
+            
+            if (parans) closeParentTab = parans.CLOSEPARENT ? true : false;
+
+            var newTab;
+            if (abaJaAberta)
+                view.abaSeleciona(selecionarAba, null);
+            else
+                newTab = view.novaAba(programa, null, null, descricao, path, parans, false, rota);
+
+            if (closeParentTab) {
+                view.fecharAba(newTab.parent);
+                view.abaSeleciona(newTab, null);
+            }
+        }
+
+        function abrirMsgUsr(programa, descricao, path, parans) {
+
+            var selecionarAba = "";
+
+            if (abaJaAberta)
+                view.abaSeleciona(selecionarAba, null);
+            else
+                view.novaAba(programa, null, null, descricao, path, parans, false);
+        }
+
+        var isRefresh = false;
+
+        $(window, document).keydown(function(e) {
+            var keycode = e.which;
+            console.log('key', keycode);
+            if (keycode == 116){
+                isRefresh = true;
+            }
+        });
+
+        var abaOrdem = 4;
+
+        $(document).ready(function () {
+
+            $(window).bind("beforeunload", function (e) {
+                console.log('beforeunload');
+                if (travarSair) return "Desaja sair do sistema?";
+                else return;
+            });
+
+            $(window).bind('unload', function(e){
+                if (!isRefresh) {
+                    clearCookie();
+                }
+            });
+
+            // var verificarChamados = setInterval(() => {
+            //     verificaChamados();
+            // }, 180000);
+
+            var query = null;
+            var search = location.search.substring(1);
+
+            if (search != "")
+                query = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+
+            // document.cookie = "id=";
+            // document.cookie = "teste=";
+
+            // if (query != null) {
+            //     document.cookie = "id=" + query.ID;
+            //     document.cookie = "teste=teste";
+            // }
+
+            if (bkp) $("#menu-superior,#abaProgramas").addClass("inverted orange");
+            if (develop) $("#menu-superior,#abaProgramas").addClass("inverted blue");
+
+            var NewTab = function (init) {
+
+                var self = this;
+
+                if (query != null)
+                    var id = query.ID;
+
+                telasAbertas++;
+
+                var url = "";
+
+                if (init.rota && init.rota.length > 0) {
+
+                    url = `https://${subDomain}frontend.otimogestor.com.br/#${init.rota}?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E`;
+                }
+                else {
+
+                    url = "/cgi-bin/exec.cgi?PRG=" + init.programa.toLowerCase() + "&ID=" + id;
+                    // var url = "/cgi-bin/exec.cgi?PRG=" + init.programa.toLowerCase();
+    
+                    if (init.programa == 'OGP060A1') {
+                        url = "https://sistema.otimogestor.com.br/cgi-bin/exec.cgi?PRG=" + init.programa.toLowerCase() +"&API_TOKEN=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E";
+                    }
+    
+                    if (init.programa == 'OGP065A1' || init.programa == 'OGP065A2') {    ////    PORTAL MELHORIAS PRODUCAO
+                        url = "https://sistema.otimogestor.com.br/cgi-bin/exec.cgi?PRG=" + init.programa.toLowerCase();
+                    }
+        
+                    if (init.programa == 'OGP067A1') {
+                        url = "https://sistema.otimogestor.com.br/cgi-bin/exec.cgi?PRG=" + init.programa.toLowerCase();
+                    }
+                }
+                
+                if (init.parans != null) {
+                    url += "&" + serialize(init.parans);
+                }
+
+                abaOrdem++;
+
+                self.idTab = ko.observable(init.programa + "-" + telasAbertas);
+                self.titulo = ko.observable(init.titulo);
+                self.caminho = ko.observable(url);
+                self.podeFechar = ko.observable(init.fechar);
+                self.icone = "";
+                self.parent = init.parent;
+                self.favorite = ko.observable(init.favorite);
+                self.ordem = ko.observable(abaOrdem);
+
+                if (init.path)
+                    self.path = init.path;
+                else
+                    self.path = "";
+            }
+
+            var Menu = function () {
+                var self = this;
+
+                if (query != null)
+                    var id = query.ID;
+
+                var url = "/cgi-bin/exec.cgi?PRG=ogp026a1&ID=" + id;
+
+                self.idTab = ko.observable("menu");
+                self.titulo = ko.observable("Menu");
+                self.caminho = ko.observable("");
+                self.podeFechar = ko.observable(false);
+                self.favorite = ko.observable(false);
+                self.icone = "search";
+                self.path = "";
+                self.ordem = ko.observable(3);
+
+                setTimeout(function () {
+                    self.caminho(url);
+                }, 500);
+            }
+
+            /*
+            var baseConhecimento = function (link) {
+                var self = this;
+
+                var url = `/cgi-bin/exec.cgi?PRG=ogp002a2`;
+
+                self.idTab = ko.observable("baseConhecimento");
+                self.titulo = ko.observable("");
+                self.caminho = ko.observable(url);
+                self.podeFechar = ko.observable(false);
+                self.favorite = ko.observable(false);
+                self.icone = "tasks";
+                self.path = "";
+                self.ordem = ko.observable(0);
+            }
+            */
+
+            var Dashboard = function () {
+                var self = this;
+
+                self.idTab = ko.observable("dashboard");
+                self.titulo = ko.observable("Dashboard");
+                self.caminho = ko.observable("/comum/site/flot-charts.html");
+                self.podeFechar = ko.observable(false);
+                self.favorite = ko.observable(false);
+                self.icone = "";
+                self.path = "";
+                self.ordem = ko.observable(2);
+            }
+
+            var Painel = function () {
+                var self = this;
+
+                if (query != null)
+                    var id = query.ID;
+
+                var url = "/cgi-bin/exec.cgi?PRG=painel&ID=" + id;
+
+                self.idTab = ko.observable("painel");
+                self.titulo = ko.observable("Painel");
+                self.caminho = ko.observable(url);
+                self.podeFechar = ko.observable(false);
+                self.favorite = ko.observable(false);
+                self.icone = "";
+                self.path = "";
+                self.ordem = ko.observable(1);
+            }
+
+            var Treinamento = function () {
+                var self = this;
+
+                if (query != null)
+                    var id = query.ID;
+
+                var url = "/cgi-bin/exec.cgi?PRG=treinamento";
+
+                self.idTab = ko.observable("treinamento");
+                self.titulo = ko.observable("Treinamento");
+                self.caminho = ko.observable(url);
+                self.podeFechar = ko.observable(false);
+                self.favorite = ko.observable(false);
+                self.icone = "";
+                self.path = "";
+                self.ordem = ko.observable(2);
+            }
+
+
+            var ViewModel = function (init) {
+
+                var self = this;
+
+                ko.bindingHandlers.timerCheck = {
+                    update: function (element, valueAccessor) {
+                        let fim = ko.unwrap(valueAccessor());
+                        var ultimo = moment(); 
+                        if (fim != ''){
+                            var timer = setInterval(async function() {
+                                let final = ko.unwrap(valueAccessor());
+                                if (final == ''){
+                                    clearInterval(timer);
+                                    self.tempoRestante(-1);
+                                }else{
+                                    var inicio = moment();
+                                    var difUltimo = Math.abs(inicio.diff(ultimo,'seconds'));
+                                    if (difUltimo > 5){
+                                        await self.getTimeActual();
+                                    }
+                                    var fim = moment(final);
+                                    ultimo =  moment();
+                                    inicio.add(self.difTime());
+                                    var dif = fim.diff(inicio,'seconds');
+                                    self.tempoRestante(dif);
+                                    $(element).text(self.minToHour(dif));
+                                    if (dif <= 0) {
+                                        clearInterval(timer);
+                                        finalizaAplicacao(true);
+                                    }
+                                }
+                            }, 1000);
+                        }
+                    }
+                };
+
+                self.minToHour = function(seconds){
+                    var segundos = 0;
+                    var difHoras = Math.floor(seconds / 60 / 60);
+                    segundos = seconds - (difHoras * 60 * 60);
+                    var difMin = Math.floor(segundos / 60);
+                    segundos = segundos - (difMin * 60);             
+
+                    return `${(difHoras < 10 ? '0'+difHoras.toString() : difHoras.toString())}:${(difMin < 10 ? '0'+difMin.toString() : difMin.toString())}:${(segundos < 10 ? '0'+segundos.toString() : segundos.toString())}`;
+                }
+
+                // self.menuAntigo = "/cgi-bin/exec.cgi?PRG=chamadaog&ID=" + query.ID;
+
+                self.tabList = ko.observableArray();
+                self.favorites = ko.observableArray();
+                self.posts = ko.observableArray();
+                self.abaAtual = ko.observable();
+                self.abaSelecionada = ko.observable();
+                self.abaIdAtual = ko.observable();
+                self.dataFim        = ko.observable('');
+                self.difTime        = ko.observable(0);
+                self.tempoRestante  = ko.observable(-1);
+                self.mensagens      = ko.observableArray([]);
+                self.mensagemAtual  = ko.observable();
+
+                self.printAba = function () {
+                    $("#iframe" + self.abaIdAtual())[0].contentWindow.print();
+                }
+
+                self.maximizar = function () {
+
+                    window.open(self.abaAtual());
+                }
+
+                self.reload = function () {
+                    alertify.notify('Essa funcionalidade foi desabilitada, em breve será removida', 'error', 8, null);
+                    //$("#iframe" + self.abaIdAtual())[0].contentWindow.location.reload()
+                }
+                self.interagir = function () {
+                    abrirAbaMenu('OGP065A1', 'Interagir Chamados', null, { CODEMPRESA: '2597', USUARIOCLIENTE: 'MAURICIO' });
+                }
+                self.favorito = function (aba, evento) {
+                    if (query != null)
+                        var id = query.ID;
+
+                    var programa = self.abaIdAtual().substr(0, 8);
+                    if (programa.length >= 8 && self.abaSelecionada().podeFechar()) {
+                        $.get('/cgi-bin/exec.cgi?PRG=rot307a1&ISAJAX=S&NOVOMENU=S&ID=' + id + '&CODPROGRAMA=' + programa, function (data) {
+                            eval(data);
+                        });
+                    }
+                }
+                self.buscaFavoritos = function () {
+                    if (query != null)
+                        var id = query.ID;
+                    $.get('/cgi-bin/exec.cgi?PRG=retornajson&ISAJAX=S&ID=' + id + '&TIPO=FAVORITO', function (data) {
+                        eval(data);
+                    });
+                }
+                self.abaSeleciona = function (aba, evento) {
+
+                    self.abaSelecionada(aba);
+
+                    $("#tabFrame").children().removeClass("active");
+                    $("#tabFrame #" + aba.idTab()).addClass("active");
+
+                    $("#abaProgramas").children().removeClass("active");
+                    $("#abaProgramas .item[data-tab='" + aba.idTab() + "']").addClass("active");
+
+                    if (aba.idTab() == "menu") {
+                        $("iframe#iframemenu")[0].contentWindow.criaScroll();
+                    }
+
+                    self.abaAtual(aba.caminho());
+
+                    self.abaIdAtual(aba.idTab());
+
+                    var cor = aba.path.split('#')[1];
+
+                    var path = aba.path.split('#')[0];
+
+                    if (cor == undefined) {
+                        cor = "bgm-green";
+                    }
+
+                    $("#caminho").removeClass(function (index, className) {
+                        return (className.match(/\bbgm-\S+/g) || []).join(' ');
+                    });
+
+                    $("#caminho").addClass(cor);
+
+                    $("#caminhaPrograma").text(path);
+
+                    setTimeout(function () {
+                        if ($("#" + aba.idTab() + " iframe")) {
+                            resizeIframe($("#" + aba.idTab() + " iframe")[0]);
+                        }
+                    }, 200);
+                }
+
+                self.enviarEmail = function (data, evento) {
+
+                    var conteudo = $("#iframe" + data.abaIdAtual())[0].contentWindow;
+
+                    conteudo.location.href = conteudo.location.href.replace("exec.cgi", "pdfmail.cgi");
+
+                }
+                self.darkTheme = function () {
+                    return localStorage.getItem("theme") == 'dark' ? true : false;
+                }
+
+                self.enviaAcessoPrograma = function (programa) {
+                    var url = `${dadosApi.uri}/usuario/acesso-programa?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E`;
+                    $.ajax({
+                        url: url,
+                        method: 'POST',
+                        contentType: "application/json",
+                        data: JSON.stringify({programa: programa}),
+                        dataType: 'json'
+                    });
+                }
+                
+                self.retornaMensagens = function () {
+                    var url = `${dadosApi.uri}/user/mensagens?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E&limite=10`;
+                    $.ajax({
+                        url: url,
+                        method: 'GET',
+                        contentType: "application/json",
+                        dataType: 'json',
+                        success: function (data) {
+                            const mensagens = data.map(item => ({
+                                ...item,
+                                dataleitura: ko.observable(item.dataleitura),
+                            }));
+                            self.mensagens(mensagens);
+                        }
+                    });
+                }
+
+                self.qtdMensagens = ko.pureComputed(function() {
+                    return self.mensagens().filter(item => item.dataleitura() == '0000-00-00').length;
+                }) 
+
+                self.mensagensOrdenadas = ko.pureComputed(function() {
+                    
+                    const dados = _.chain(self.mensagens())
+                        .orderBy('datacompleta', 'desc')
+                        .take(10)
+                        .value();
+
+                    return dados;
+                })
+
+                self.mostraMensagem = function(data) {
+                    var url = `${dadosApi.uri}/user/mensagens/${data.recnum}/lida?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E&limite=10`;
+
+                    $("#modalMensagens").modal('show');
+                    self.mensagemAtual(data);
+                    data.dataleitura(moment().format('YYYY-MM-DD'));
+                    data.horaleitura = moment().format('HH:m:s');
+
+                    $.ajax({
+                        url: url,
+                        method: 'PUT',
+                        contentType: "application/json",
+                        dataType: 'json',
+                    });
+                }
+
+                self.acaoMensagem = function(data) {
+                    self.novaAba('tgp051a1', null, null, 'Importar Certificado Digital', null, null, null, data.acaobotao);
+                    $("#modalMensagens").modal('hide');
+                }
+
+                self.verTodasMensagens = function() {
+                    self.novaAba('tgp050a1', null, null, 'Todas as Mensagens', null, null, null, '/user/listagem-mensagens');
+                    $("#modalMensagens").modal('hide');
+                }                
+                
+                self.novaAba = function (codigo, data, evento, descricao, path, parans, noFocus, rota) {
+                    self.enviaAcessoPrograma(codigo);
+                    var favorite = false;
+                    for (var i = 0; i <= self.favorites().length - 1; i++) {
+                        var cod = self.favorites()[i].programa;
+                        if (cod == codigo) {
+                            favorite = true;
+                        }
+                    }
+                    var aba = {
+                        programa: codigo,
+                        titulo: "",
+                        fechar: true,
+                        path: path,
+                        parans: parans,
+                        parent: self.abaSelecionada(),
+                        favorite: favorite,
+                        rota: rota,
+                    };
+
+                    if (evento != null)
+                        aba.titulo = $(evento.target).text().trim();
+                    else
+                        aba.titulo = descricao;
+
+                    var newTab = new NewTab(aba);
+                    self.tabList.push(newTab);
+
+                    if (!noFocus) $("#abaProgramas:visible .item").last().click();
+
+
+                    $("#abaProgramas:visible .item").last().css("border-bottom-color", $("#caminho").css("background-color"));
+
+                    return newTab;
+                }
+
+                //self.tabList.push(new baseConhecimento());
+
+                if ('2597' == '9997')
+                    self.tabList.push(new Dashboard());
+                else
+                    self.tabList.push(new Painel());
+                
+                if (2597 != 2139) self.tabList.push(new Treinamento());
+
+                self.tabList.push(new Menu());
+
+                setTimeout(function () {
+                    if (2597 != 2139) {
+                        $("#abaProgramas .item").first().next().next().click();
+                    } else {
+                        $("#abaProgramas .item").first().click();
+                    }
+                }, 500);
+
+                setTimeout(function () {
+                    resizeIframe($("iframe")[0]);
+                }, 2000);
+
+                self.fecharAba = function (aba) {
+                    self.tabList.remove(aba);
+
+                    if (self.tabList.indexOf(aba.parent) >= 0)
+                        self.abaSeleciona(aba.parent);
+                    else
+                        $("#abaProgramas .item:eq(1)").click();
+                }
+
+                self.fecharTodasAba = function (aba) {
+                    const itens = self.tabList().filter((item) => item.podeFechar());
+                    for (let index = 0; index < itens.length; index++) {
+                        var item = itens[index];
+                        self.fecharAba(item);
+                    }
+                }
+
+                // Pesquisa 
+
+                self.checkPesquisa = function () {
+                    
+                    if (2597 == 9996) return;
+
+                    var uri = `${dadosApi.uri}`;
+                    
+                    $.ajax({
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        url: uri + "/pesquisa/verifica-usuario?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data != '0') {
+                                var idPesquisa = data;
+                                var nota = 0;
+
+                                $("#notaNps a.item").click(function () {
+                                    nota = $(this).text();
+
+                                    switch (true) {
+                                        case (nota < 7):
+                                            cor = '#ff6464';
+                                            classe = 'ruim';
+                                            tipo = 'R';
+                                            break;
+                                        
+                                        case (nota < 9):
+                                            cor = '#ffff0082';
+                                            classe = 'medio';
+                                            tipo = 'M';
+                                            break;
+                                        
+                                        default:
+                                            cor = '#6dff6d';
+                                            classe = 'excelente';
+                                            tipo = 'B';
+                                            break;
+                                    }
+
+                                    getMotivos(tipo);
+
+                                    $("#notaNps a.item").removeClass("active").css('background-color', 'white');
+                                    $("#notaNps a.emoji").removeClass("ruim").removeClass("medio").removeClass("excelente");
+                                    $("#notaNps a.emoji").addClass(classe);
+                                    $(this).addClass("active").css('background-color', cor);
+
+                                    $("#pergundaNps").fadeIn(200).show();
+                                    $("#enviar").fadeIn(200).show();
+                                })
+
+                                $("#enviarPesquisa").click(function () {
+                                    if ($('#MOTV').val() != null || nota >= 9) {
+                                        $.ajax({
+                                            type: "POST",
+                                            contentType: "application/json; charset=utf-8",
+                                            url: uri + "/nota-pesquisa/insert?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E",
+                                            data: JSON.stringify({
+                                                empresa: '2597',
+                                                usuario: 'MAURICIO',
+                                                idPesquisa: idPesquisa,
+                                                nota: nota,
+                                                observacao: $("#obsPesquisa").val(),
+                                                codMotivos: $('#MOTV').val()?.toString() || ''
+                                            }),
+                                            dataType: "json",
+                                            success: function (data) {
+                                                $("#framePesquisa").modal('hide');
+                                            }
+                                        });
+                                        alertify.set('notifier','position', 'bottom-right');
+                                        alertify.success('Pesquisa Registrada com sucesso!');
+                                    } else {
+                                        alertify.set('notifier','position', 'bottom-right');
+                                        alertify.error('Por favor informar o(s) motivo(s)');
+                                    }
+                                });
+
+                                $("#framePesquisa").modal({onVisible: function () {
+                                    $('#MOTV').addClass("search selection fluid").dropdown({
+                                        placeholder: 'Selecionar',
+                                        forceSelection: false,
+                                        fullTextSearch: true,
+                                        selectOnKeydown: false
+                                    });
+                                }}).modal('show');
+                            }
+                        }
+                    });
+                }
+
+                self.listaCarderno = () => {
+
+                    $.get("https://otimogestor.com.br/wp-json/wp/v2/posts?categories=130&per_page=20&orderby=date", (data) => {
+
+                        for (let index = 0; index < data.length; index++) {
+                            const element = data[index];
+                            element.title.rendered = element.title.rendered.replace("Caderno da Inova\u00e7\u00e3o &#8211; ", "");
+                            
+                        }
+                        data.push({
+                            title: {
+                                rendered: "Todas as publicações"
+                            },
+                            link: "https://otimogestor.com.br/blog/category/caderno-da-inovacao/"
+                        });
+                        
+                        self.posts(data);
+                    });
+                
+                }
+
+                self.getTimeActual = async function (){
+                    let subdomain = 'api';
+                    if (bkp) {
+                        subdomain = 'sandbox';  
+                    }
+                    const atual = await getAsync(`https://${subdomain}.otimogestor.com.br/api/user?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E`);
+                    const dataServidor = moment(atual.datetime);
+                    self.difTime(dataServidor.diff(moment()));
+                }
+
+                self.listaCarderno();
+                self.getTimeActual();
+                self.retornaMensagens();
+            }
+
+            view = new ViewModel();
+            view.buscaFavoritos();
+            $(window).resize(function () {
+                resizeIframe($("#" + view.abaIdAtual() + " iframe")[0]);
+            });
+
+            ko.applyBindings(view);
+
+            view.checkPesquisa();
+
+            // $("#modalVideo").modal({ closable: false }).modal("show");
+            // $(".ui .embed").embed({
+            //     autoplay: 1,
+            // });
+
+            // $('#modalImagem').modal({blurring: true}).modal('show');
+            //mostraAviso();
+
+            //document.getElementById("baseConhecimento").removeAttribute("draggable");
+            document.getElementById("painel").removeAttribute("draggable");
+            const abaTreinamento = document.getElementById("treinamento");
+            if (abaTreinamento) {
+                abaTreinamento.removeAttribute("draggable");
+            }
+            document.getElementById("menu").removeAttribute("draggable");
+            //$('#baseConhecimento').removeClass("draggable");
+            $('#painel').removeClass("draggable");
+            $('#treinamento').removeClass("draggable");
+            $('#menu').removeClass("draggable");
+            
+            const qtdDiasSenha = '72';
+            if (qtdDiasSenha >= 90) {
+                setTimeout(() => {
+                    $("iframe#iframemenu")[0].contentWindow.trocarSenha();
+                },6000);
+            } else if (qtdDiasSenha >= 75) {
+                setTimeout(() => {
+                    $("#avisoAlterarSenha").modal({
+                        onApprove: function () {
+                            $("iframe#iframemenu")[0].contentWindow.trocarSenha();
+                        },
+                    }).modal('show');
+                },5000);
+            }
+
+            try {
+                setLocalizacao();
+            } catch (error) {
+            }
+        });
+
+        function setLocalizacao() {
+            getCoordenadasNavegador(function(error, localizacao) {
+                const coordenadas = {
+                    longitude: null,
+                    latitude: null
+                };
+                if (!error) {
+                    coordenadas.latitude = localizacao.latitude;
+                    coordenadas.longitude = localizacao.longitude;
+                }
+                sendLocalizacao(coordenadas);
+            });
+        }
+
+        function sendLocalizacao(coordenadas = null) {
+            let dados = {};
+            if (coordenadas.latitude) {
+                dados = coordenadas;
+            }
+            dados.api_token = dadosApi.apiToken;
+            $.post(`${dadosApi.uri}/localizacao`, dados);
+        }
+
+        function getCoordenadasNavegador(callback) {
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    callback(null, { latitude, longitude });
+                }, function(error) {
+                    callback(error, null);
+                });
+            } else {
+                callback('erro', null);
+            }
+        }
+
+        function mostraAviso(){
+            $("#modalAviso").modal({ closable: false, blurring: true }).modal("show");
+        }
+
+        async function getAsync(url){
+            const response = await fetch(url);
+            return await response.json();
+        }
+
+        // Abre chat
+        //
+        function removeFavorito(programa) {
+            var i = view.favorites().filter(function (elem) {
+                return (elem.programa == programa);
+            })[0];
+            view.favorites.remove(i);
+        }
+
+        function verificaChamados() {
+            var search = location.search.substring(1);
+            var id = 0;
+            if (search != "")
+                query = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+
+            if (query != null) {
+                id = query.ID;
+            }
+            var url = '/cgi-bin/exec.cgi?ISAJAX=S&PRG=retornajson&TIPO=CHAMADOOG&ID=' + id;
+            $.get(url, function (data) {
+                var retorno = JSON.parse(data);
+                $("#qtdChamado").text(retorno.chamados);
+                if (retorno.chamados == 0) {
+                    $("#btnChamado").attr('style', 'display:none');
+                } else {
+                    $("#btnChamado").attr('style', '');
+                }
+                $("#qtdNotification").text(retorno.mensagens);
+                if (retorno.mensagens == 0) {
+                    $("#btnNotification").attr('style', 'display:none');
+                } else {
+                    $("#btnNotification").attr('style', '');
+                }
+            });
+        }
+
+        function finalizaAplicacao(mensagem = false){
+            clearCookie();
+            travarSair = false;
+            if (mensagem) {
+                alertify.alert('Tempo Esgotado', 'Seu tempo de utilização do Sistema acabou!', function(){  }).set('closable', false).set({onshow:null, onclose:function(){ window.location.href = "https://sistema.otimogestor.com.br"; }});
+            } else {
+                let url = "https://sistema.otimogestor.com.br";
+                if (bkp) {
+                    url = "https://sandbox.otimogestor.com.br/"
+                }
+                if (develop) {
+                    url = "https://develop-api.otimogestor.com.br/"
+                }
+                if (beta) {
+                    url = "https://beta-api.otimogestor.com.br/"
+                }
+                window.location.href = url; 
+            }
+        }
+
+        var pusherHost    = (bkp ? 'sandbox.pusher.otimogestor.com.br' : 'pusher.otimogestor.com.br');
+        var pusherPort    = (bkp ? 6002 : 6001);
+        if (develop) {
+            pusherHost = 'develop.pusher.otimogestor.com.br';
+            pusherPort = 6003;
+        }
+        var contadorInatividade = 0;
+        pusher = new Pusher(`Bp5E622BjFNaibzJP2tD/dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E`, {
+            cluster: 'u2',
+            authEndpoint: `${dadosApi.url}/broadcasting/auth?api_token=dRjeE7uGVBiret2JjF9JrtPof3Xqma3EDZJj3GDd7NsXQvVrAmpuuQ6D4c2E`,
+            authTransport: 'ajax',
+            enabledTransports: ['ws','wss'],
+            wsHost: pusherHost,
+            wsPort: pusherPort,
+            wssPort: pusherPort,
+            wssHost: pusherHost,
+            disableStats: true,
+            httpHost: dadosApi.url
+        });
+        pusher.connection.bind('connected', function () {
+            contadorInatividade = 0;
+        });
+        pusher.connection.bind('unavailable', function () {
+            if (contadorInatividade == 0 && view.dataFim() && view.dataFim() != '') {
+                contadorInatividade++;
+                setTimeout(() => {
+                    if (contadorInatividade > 0) {
+                        finalizaAplicacao();
+                    }
+                }, 180000)
+                alertify.alert('Conexão', `Não foi possível se conectar ao servidor para verificar o tempo restante, se a conexão não for reestabelecida em 3 minutos você será deslogado do Sistema!`);
+            }
+        });
+        channelUser = pusher.subscribe(`presence-App.User.43515`);
+        channelUser.bind('App\\Events\\UsuarioEvent',function(data){
+            view.dataFim(data.message.datetime);
+        });
+        channelUser.bind('App\\Events\\MensagemUsuarioEvent',function(data){
+            view.mensagens(data.mensagens.map(item => ({
+                        ...item,
+                        dataleitura: ko.observable(item.dataleitura || '0000-00-00')
+                    })));
+        });
+        channelPDV = pusher.subscribe(`presence-PDV.2597`);
+               
+        openTableFromVue = (event) => {
+            if (event.data == 'SairModalSenha') {
+                $('#alterarSenha').modal('hide'); 
+            }
+            else if (event.data.tituloProposta) {
+                 let tituloAnterior = document.title;
+                 document.title = event.data.tituloProposta;
+                 setTimeout(() => document.title = tituloAnterior, 3000);
+            }
+            else {
+                const originFrontend = `https://${subDomain}frontend.otimogestor.com.br`
+                if (event.origin !== originFrontend) return;
+                abrirAbaMenu(event.data.programa, event.data.titulo, null, event.data.parametros, event.data.rota);
+            }
+        }
+
+        window.addEventListener("message", openTableFromVue, false);
+        function initConpass(id) {
+            if (window.Conpass) {
+                window.Conpass.init();
+                Conpass.startFlow(id);
+            }
+        }
+
+        function getMotivos(tipo) {
+            var url = "/cgi-bin/exec.cgi?ISAJAX=S&PRG=ogp002a1&ACAO=50&TIPO=" + tipo;
+            $.get(url, function (data) {
+                $("#MOTV option").remove();
+                $("#MOTV").append(data);
+                $("#MOTV").dropdown('clear');
+            });
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.currentTarget.classList.add("dragging");
+            ev.currentTarget.addEventListener("dragend", e => {
+                e.preventDefault();
+                e.currentTarget.classList.remove("dragging");
+            })
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            
+            var element = document.getElementById(data);
+            var closest = ev.target.closest(".draggable");
+
+            var elementObj = view.tabList().find(item => (item.idTab() == data));
+                        
+            if (closest) {
+                var tab = closest.getBoundingClientRect();
+                var offset = ev.clientX - (tab.left + (tab.width / 2));
+                var closestObj = ko.dataFor(ev.target.closest(".draggable"));
+
+                if (offset > 0) {
+                    elementObj.ordem(closestObj.ordem() + 1);
+                } else{
+                    elementObj.ordem(closestObj.ordem() - 1);
+                }
+            } else {
+                var tab = element.getBoundingClientRect();
+                var offset = ev.clientX - (tab.left + (tab.width / 2));
+
+                if (offset > 0) {
+                    abaOrdem++;
+                    elementObj.ordem(abaOrdem);
+                } else {
+                    elementObj.ordem(4);
+                }
+            }
+        }
+
+    </script>
+    <script src="https://fast.conpass.io/T-pFF7Y_fGzo.js"></script>
+<script type="text/javascript">var mdChatClient="A87FCD03A5974F9C9235E177073740FE";</script>
+<script src="https://chat.movidesk.com/Scripts/chat-widget.min.js"></script>
+    <!--CHAT_MOVIDESK-->
+</body>
+</html>
+
+<script type="text/javascript">
+messageObj = new DHTML_modalMessage();
+messageObj.setShadowOffset(5);
+function displayMessage(url,sizex,sizey)
+{
+        messageObj.setSource(url);
+        messageObj.setCssClassMessageBox(false);
+        if (sizex){ messageObj.setSize(sizex,sizey);}else{messageObj.setSize(800,350);}
+        messageObj.setShadowDivVisible(true);
+        messageObj.display();
+}
+function displayStaticMessage(messageContent,sizex,sizey)
+{
+        messageObj.setHtmlContent(messageContent);
+        if (sizex){ messageObj.setSize(sizex,sizey);}else{messageObj.setSize(500,350);}
+        messageObj.setCssClassMessageBox(false);
+        messageObj.setSource(false);
+        messageObj.setShadowDivVisible(true);
+        messageObj.display();
+}
+function closeMessage()
+{
+        messageObj.close();
+}
+</script>
+<script>
+    $(document).ready(function() {
+        setTour();
+    });
+
+    var intro = null;
+    function setTour() {
+        try {
+            $.ajax({
+                url: `${dadosApi.uri}/user/tours/ogp002a1`,
+                method: 'GET',
+                contentType: "application/json",
+                data: {api_token: dadosApi.apiToken},
+                dataType: 'json',
+                success: (data) => {
+                    const tour_recnum = data.data.recnum;
+                    const titulo = data.data.titulo;
+                    const steps = [{
+                        title: titulo,
+                        intro: data.data.descricao,
+                    }].concat(data.data.items.map((item) => ({
+                        intro: item.texto,
+                        title: titulo,
+                        element: getElementForIntroJs(item.elemento),
+                        callback_pre: item.callback_pre,
+                        callback_pos: item.callback_pos
+                    })));
+
+                    intro = introJs().setOptions({
+                        prevLabel: 'Anterior',
+                        doneLabel: 'Fim',
+                        nextLabel: 'Próximo',
+                        showProgress: true,
+                        steps: steps,
+                        exitOnOverlayClick: false
+                    });
+                    intro.onbeforechange((c) => {
+                        const etapa = intro.currentStep();
+                        if (etapa >= 0) {
+                            if (steps[etapa].callback_pre) {
+                                eval(steps[etapa].callback_pre);
+                            }
+                        }
+                    })
+                    .onafterchange((c) => {
+                        const etapa = intro.currentStep();
+                        const etapaAnterior = parseInt(etapa) - 1;
+                        if (etapaAnterior >= 0) {
+                            if (steps[etapaAnterior].callback_pos) {
+                                eval(steps[etapaAnterior].callback_pos);
+                            }
+                        }
+                    })
+                    .oncomplete(() => {
+                        if (steps[steps.length - 1].callback_pos) {
+                            console.log('callbak_pos_final', steps[steps.length - 1].callback_pos);
+                            eval(steps[steps.length - 1].callback_pos);
+                        }
+                        $.post(`${dadosApi.uri}/user/tours/${tour_recnum}/visualizado?api_token=${dadosApi.apiToken}`);
+                    })
+                    .start();
+                }
+            });
+        } catch (error) {
+        }
+    }
+
+    function getElementForIntroJs(query) {
+        const element = document.querySelector(query);
+        const inputs = ['SELECT', 'INPUT', 'TEXTAREA'];
+        const tagName = (element.tagName || '');
+        if (inputs.indexOf(tagName) >= 0) {
+            let pai = element.parentElement;
+            if (tagName == 'SELECT') {
+               pai = pai.parentElement; 
+            }
+            return pai;
+        }
+        return element;
+    }
+</script>
+
+</html>

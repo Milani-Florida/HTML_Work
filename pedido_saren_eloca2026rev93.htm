@@ -72,6 +72,12 @@
             page-break-inside: avoid;
             break-inside: avoid;
         }
+        .texto-lowercase {
+            text-transform: lowercase !important;
+        }
+        .texto-capitalize {
+            text-transform: capitalize !important;
+        }
         @media print {
             body {
                 font-size: 11.5px !important;
@@ -105,6 +111,16 @@
     .imgProdutoOrca {
         width: 60px!important;
         height: 60px!important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+    .tabela-itens-produtos img {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
     }
 </style>
 <body style="margin: 0px; overflow-x: hidden; min-width: 320px; font-family: Helvetica, Arial, sans-serif; line-height: 1.2em; color: rgba(0, 0, 0, 0.87); font-smooth: antialiased; font-size: 12px;">
@@ -131,13 +147,13 @@
                 <td class="twelve wide" style="padding-top: 0.2em; padding-bottom: 0.1em; line-height: 1.05em; text-align: inherit; border-top: none; border-left: none; width: 75%; z-index: 2;" width="75%">
                     <a href="https://www.voltyou.com.br/">
                         
-                        <img class="ui left floated small image" src="{IMAGEMLOGO}" style="box-shadow: 0px 0px 10px 0px #888888; border-radius: 0.7; position: relative; background-color: transparent; display: block; margin-right: 0.8em; margin-bottom: 0; width: 130px; height: auto; max-width: none; margin-left: 1em;" width="130">
+                        <img class="ui left floated small image" src="{IMAGEMLOGO}" style="box-shadow: none; border-radius: 0.7; position: relative; background-color: transparent; display: block; margin-right: 0.8em; margin-bottom: 0; width: 130px; height: auto; max-width: none; margin-left: 1em;" width="130">
                     </a>
                     <td class="four wide" style="border-top: none; width: 70%; padding-top: 0.2em; padding-bottom: 0.1em; padding-right: 1em; line-height: 1.05em;" width="25%">
-                        <strong>{FILIAL.ABREVIATURA} - {EMPRESA.RAZAOSOCIAL}</strong> <br/>
-                        {FILIAL.ENDERECO} {FILIAL.NUMEROEND} {FILIAL.COMPLEMENTOEND} - {FILIAL.MUNICIPIO} <br/>
-                        {FILIAL.UF} - CEP {FILIAL.CEP} - Tel. {FILIAL.TELEFONE}<br/>
-                        CNPJ: {FILIAL.CNPJ} - Inscr.Estadual {FILIAL.IE}
+                        <strong>{EMPRESA.RAZAOSOCIAL}</strong> <br/>
+                        <span class="texto-capitalize">{FILIAL.ENDERECO}</span> {FILIAL.NUMEROEND} <span class="texto-capitalize">{FILIAL.COMPLEMENTOEND}</span> - <span class="texto-capitalize">{FILIAL.MUNICIPIO}</span> - {FILIAL.UF}<br/>
+                        CEP: {FILIAL.CEP} - Tel: {FILIAL.TELEFONE}<br/>
+                        CNPJ: {FILIAL.CNPJ} - Inscrição Estadual: {FILIAL.IE}
                     </td>
                 </td>
             </tr>
@@ -159,9 +175,9 @@
         var emailrep = '{REPRESEN.EMAIL}';
                     </script>
                     <strong style="color: rgb(46, 58, 120);">Status:</strong> {STATUS}<br/>
-                    <strong style="color: rgb(46, 58, 120);">Vendedor:</strong> {REPRESEN.RAZAOSOCIAL} <br/>
-                    <strong style="color: rgb(46, 58, 120);">Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="ligarrepresentante">{REPRESEN.TELEFONE}</button></strong><br/>
-                    <strong style="color: rgb(46, 58, 120);">E-mail:<button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailrepres">{REPRESEN.EMAIL}</button></strong><br/>
+                    <strong style="color: rgb(46, 58, 120);">Vendedor:</strong> <span class="texto-capitalize">{REPRESEN.RAZAOSOCIAL}</span> <br/>
+                    <strong style="color: rgb(46, 58, 120);">Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:90%; background: none;" id="ligarrepresentante">{REPRESEN.TELEFONE}</button></strong><br/>
+                    <strong style="color: rgb(46, 58, 120);">E-mail:<button class="texto-lowercase" style="border: none; color:blue; text-decoration:underline; font-size:80%; background: none;" id="enviaremailrepres">{REPRESEN.EMAIL}</button></strong><br/>
                 </td>
             </tr>
         </table>
@@ -181,17 +197,17 @@
             <tr>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
                     <strong>CNPJ:</strong> {CNPJ} <br/>
-                    <strong>Endereço:</strong> {ENDERECO} <br/>
-                    <strong>Bairro:</strong> {BAIRRO} <br/>
-                    <strong>Contato:</strong> {CONTATO.NOME} <br/>
-                    <strong>Contato E-mail:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailcontato">{CONTATO.EMAIL}</button>
+                    <strong>Endereço:</strong> <span class="texto-capitalize">{ENDERECO}</span> <br/>
+                    <strong>Bairro:</strong> <span class="texto-capitalize">{BAIRRO}</span> <br/>
+                    <strong>Contato:</strong> <span class="texto-capitalize">{CONTATO.NOME}</span> <br/>
+                    <strong>Contato E-mail:</strong><button class="texto-lowercase" style="border: none; color:blue; text-decoration:underline; font-size:80%; background: none;" id="enviaremailcontato">{CONTATO.EMAIL}</button>
                 </td>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
                     <strong>Insc. Estadual:</strong> {INSCESTADUAL} <br/>
-                    <strong>Município:</strong> {MUNICIPIO} - {UF} <br/>
+                    <strong>Município:</strong> <span class="texto-capitalize">{MUNICIPIO}</span> - {UF} <br/>
                     <strong>CEP:</strong>{CEP}<br/>
-                    <strong>Cliente Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small;background: none;" id="ligarcliente">{CLIENTE.TELEFONE}</button><br/>
-                    <strong>Cliente E-mail:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:small; background: none;" id="enviaremailcliente">{CLIENTE.EMAIL}</button>
+                    <strong>Cliente Telefone:</strong><button style="border: none; color:blue; text-decoration:underline; font-size:90%;background: none;" id="ligarcliente">{CLIENTE.TELEFONE}</button><br/>
+                    <strong>Cliente E-mail:</strong><button class="texto-lowercase" style="border: none; color:blue; text-decoration:underline; font-size:80%; background: none;" id="enviaremailcliente">{CLIENTE.EMAIL}</button>
                 </td>
             </tr>
             <tr>
@@ -202,12 +218,12 @@
             <tr>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
                     
-                    <strong>Natureza de Operação:</strong> {NATOPERACAO} - {NATOPER.DESCRICAO} <br/>
+                    <strong>Nat. Operação:</strong> {NATOPERACAO} - {NATOPER.DESCRICAO} <br/>
                     <strong>Condição de Pagamento:</strong>{PAGAMENTOS2} {CONDPAG.DESCRICAO}
                 </td>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 50%;" width="50%">
                     <strong>Tipo de Frete:</strong>  {TIPOFRETE} <br/>
-                    <strong>Transportadora:</strong> {TRANSPORTADORA} - {TRANSP.RAZAOSOCIAL} <br/>
+                    <strong>Transportadora:</strong> <span class="texto-capitalize">{TRANSP.RAZAOSOCIAL}</span> <br/>
                     <strong>Data Prev. Fat.:</strong> {DATAPREVFAT} <br/>
                 </td>
             </tr>
@@ -222,12 +238,12 @@
             </tr>
             <tr>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
-                    <strong>Endereço:</strong> {ENDENT}<br/>
-                    <strong>Município:</strong> {MUNENT}
+                    <strong>Endereço:</strong> <span class="texto-capitalize">{ENDENT}</span><br/>
+                    <strong>Município:</strong> <span class="texto-capitalize">{MUNENT}</span>
                 </td>
                 <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
                     <strong>UF:</strong> {UFENT} <br/>
-                    <strong>Bairro:</strong> {BAIENT}
+                    <strong>Bairro:</strong> <span class="texto-capitalize">{BAIENT}</span>
                 </td>
              <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
                  <strong>CEP:</strong> {CEPENT}<br/>
@@ -245,12 +261,12 @@
             </tr>
             <tr>
                 <td class="eight wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: none; width: 50%;" width="50%">
-                    <strong>Endereço:</strong> {ENDCOB}<br/>
-                    <strong>Município:</strong> {MUNCOB}
+                    <strong>Endereço:</strong> <span class="texto-capitalize">{ENDCOB}</span><br/>
+                    <strong>Município:</strong> <span class="texto-capitalize">{MUNCOB}</span>
                 </td>
                 <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
                     <strong>UF:</strong> {UFCOB} <br/>
-                    <strong>Bairro:</strong> {BAICOB}
+                    <strong>Bairro:</strong> <span class="texto-capitalize">{BAICOB}</span>
                 </td>
                 <td class="four wide" style="padding: 0.78571429em 0.78571429em; text-align: inherit; border-top: 1px solid rgba(34, 36, 38, 0.1); border-left: 1px solid rgba(34, 36, 38, 0.1); width: 25%;" width="25%">
                     <strong>CEP:</strong> {CEPCOB}
@@ -261,31 +277,31 @@
         <!--SUBHEADER-->
 
 
-        <table style="width: 100%; margin: 0em 0em; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 0.9em;" width="100%" align="left">
+        <table class="tabela-itens-produtos" style="width: 100%; margin: 0em 0em; border-radius: 0.28571429rem; text-align: left; color: rgba(0, 0, 0, 0.87); border-collapse: separate; border-spacing: 0px; font-size: 0.9em;" width="100%" align="left">
             <thead>
                 <!-- Colunas removidas da tabela de produtos: Marca, Valor IPI e ST -->
                 <tr>
-                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0.28571429rem 0em 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-left: none;border-top: 0.2em solid #2185D0; font-size: 0.7rem;">#</th>
-                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Imagem</th>
-                    <th style="text-align: center; width: 42%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Descrição do Produto</th>
-                    <th style="text-align: center; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Un</th>
-                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Qtd</th>
-                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Preço Unitário</th>
-                    <th style="text-align: right; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0em 0.28571429rem 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Preço Total</th>
+                    <th style="text-align: center; width: 3%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0.28571429rem 0em 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-left: none;border-top: 0.2em solid #2185D0; font-size: 0.7rem;">#</th>
+                    <th style="text-align: center; width: 9%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Imagem</th>
+                    <th style="text-align: center; width: 55%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Descrição do Produto</th>
+                    <th style="text-align: center; width: 5%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Un</th>
+                    <th style="text-align: right; width: 6%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Qtd</th>
+                    <th style="text-align: right; width: 10%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Unitário</th>
+                    <th style="text-align: right; width: 12%; color: rgb(46, 58, 120); padding: 0.92857143em 0.78571429em; border-radius: 0em 0.28571429rem 0em 0em; padding-left: 0.7em; padding-right: 0.7em; border-top: 0.2em solid #2185D0; font-size: 0.7rem;">Preço Total</th>
                 </tr>
             </thead>
             <tbody>
                 <!--/SUBHEADER-->
                 <!--BODY-->
                 <tr>
-                    <td style="text-align: center; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; border-left: none;border-left: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;">{ITEM}</td>
-                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{IMG}</td>
+                    <td style="text-align: center; width: 3%; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; border-left: none;border-left: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;">{ITEM}</td>
+                    <td style="width: 9%; border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{IMG}</td>
                     <!-- Colunas removidas do corpo: Marca ({FONTEFORNEC}), Valor IPI ({VALIPI}) e ST ({ST}) -->
-                    <td class="campo-longo" style="text-align: left; width: 42%; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; font-size: 0.7rem"><span class="produto-principal">{CODPRODUTO} - {DESCPRODUTO}</span><span class="produto-tecnico">{ESPTECNICA}</span></td>
-                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{UN}</td>
-                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="center">{QUANTIDADE}</td>
-                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="right">{PRECOUNITARIO}</td>
-                    <td style="border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;border-right: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;" align="right">{VALTOTAL}</td>                </tr>
+                    <td class="campo-longo" style="text-align: left; width: 55%; border-top: 1px solid rgba(34, 36, 38, 0.15); padding: 0.5em 0.7em; font-size: 0.7rem"><span class="produto-principal">{CODPRODUTO} - {DESCPRODUTO}</span><span class="produto-tecnico">{ESPTECNICA}</span></td>
+                    <td style="width: 5%; border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: center; padding: 0.5em 0.7em;" align="center">{UN}</td>
+                    <td style="width: 6%; border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="center">{QUANTIDADE}</td>
+                    <td style="width: 10%; border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;" align="right">{PRECOUNITARIO}</td>
+                    <td style="width: 12%; border-top: 1px solid rgba(34, 36, 38, 0.15); text-align: right; padding: 0.5em 0.7em;border-right: 1px solid rgba(34, 36, 38, 0.15); border-radius: 0.28571429rem;" align="right">{VALTOTAL}</td>                </tr>
 
             <!--/BODY-->
             <!--SUBTOTAL1-->
@@ -353,6 +369,29 @@
 	<div style="page-break-after:auto; "></div>
     <script>
             document.addEventListener("DOMContentLoaded", function() {
+            function aplicarTransformacoesTexto() {
+                const idioma = 'pt-BR';
+
+                // Força minúsculas de verdade (não só visual)
+                document.querySelectorAll('.texto-lowercase').forEach(function(el) {
+                    if (el && typeof el.textContent === 'string') {
+                        el.textContent = el.textContent.toLocaleLowerCase(idioma);
+                    }
+                });
+
+                // Converte para "capitalize" real: tudo minúsculo + inicial maiúscula por palavra
+                document.querySelectorAll('.texto-capitalize').forEach(function(el) {
+                    if (el && typeof el.textContent === 'string') {
+                        const textoBase = el.textContent.toLocaleLowerCase(idioma);
+                        el.textContent = textoBase.replace(/(^|[\s\-\/\(])([\p{L}])/gu, function(match, separador, letra) {
+                            return separador + letra.toLocaleUpperCase(idioma);
+                        });
+                    }
+                });
+            }
+
+            aplicarTransformacoesTexto();
+
             // Formatar Peso Bruto para duas casas decimais
             function formatPesoBruto(id) {
                 var el = document.getElementById(id);
